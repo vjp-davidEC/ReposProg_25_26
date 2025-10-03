@@ -16,13 +16,19 @@ public class Ejercicio26Tema2 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         
-        System.out.println("Por favor, introduzca un numero de 4 cifras: ");
-        int numero = entrada.nextInt();
+        int numero;
+        int primeraCifra;
+        int segundaCifra;
+        int terceraCifra;
+        int cuartaCifra;
         
-        int primeraCifra = numero / 1000;//Se divide para sacar la primera cifra
-        int segundaCifra = (numero / 100) % 10;//Se divide y salen dos cifras que a su vez se divide y se saca el resto y sale la segunda cifra 
-        int terceraCifra = (numero /10) % 10;//Se divide y salen tres cifras que a su vez se divide y se saca el resto y sale la tercera cifra
-        int cuartaCifra = numero % 10;//Se divide para sacar la cuarta cifra, pero se saca del resto
+        System.out.println("Por favor, introduzca un numero de 4 cifras: ");
+        numero = entrada.nextInt();
+        
+        primeraCifra = numero / 1000;//Se divide para sacar la primera cifra
+        segundaCifra = (numero / 100) % 10;//Se divide y salen dos cifras que a su vez se divide y se saca el resto y sale la segunda cifra 
+        terceraCifra = (numero /10) % 10;//Se divide y salen tres cifras que a su vez se divide y se saca el resto y sale la tercera cifra
+        cuartaCifra = numero % 10;//Se divide para sacar la cuarta cifra, pero se saca del resto
         
         System.out.println("La primera cifra es: " + primeraCifra);
         System.out.println("La segunda cifra es: " + segundaCifra);

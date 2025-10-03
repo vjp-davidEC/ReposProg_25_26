@@ -16,23 +16,32 @@ public class Ejercicio32Tema2 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         
-        System.out.println("Por favor, indique una cantidad de dinero: ");
-        int importe = entrada.nextInt();
-        int cantidadDinero = importe;//Lo pongo para que el importe que ponga el cliente sea la cantidad del dinero y se pueda hacer las operaciones y en System.out.println salga el otra vez el importe que puso el cliente
+        int importe;
+        int cantidadDinero;
+        int billeteCincuenta;
+        int billeteVeinte;
+        int billeteDiez;
+        int billeteCinco;
+        int monedasDos;
+        int monedasUnos;
         
-        int billeteCincuenta = cantidadDinero / 50;
+        System.out.println("Por favor, indique una cantidad de dinero: ");
+        importe = entrada.nextInt();
+        cantidadDinero = importe;//Lo pongo para que el importe que ponga el cliente sea la cantidad del dinero y se pueda hacer las operaciones y en System.out.println salga el otra vez el importe que puso el cliente
+        
+        billeteCincuenta = cantidadDinero / 50;
         cantidadDinero %= 50;//Esta puesto para que el resto del dinero que falta se vaya a la cantida del dinero total y se hace igual que en todas las demas operaciones
         
-        int billeteVeinte = cantidadDinero / 20;
+        billeteVeinte = cantidadDinero / 20;
         cantidadDinero %= 20;
         
-        int billeteDiez = cantidadDinero / 10;
+        billeteDiez = cantidadDinero / 10;
         cantidadDinero %= 10;
         
-        int billeteCinco = cantidadDinero / 5;
+        billeteCinco = cantidadDinero / 5;
         cantidadDinero %= 5;
         
-        int monedasDos = cantidadDinero / 2;
+        monedasDos = cantidadDinero / 2;
         cantidadDinero %= 2;
         
         int monedasUno = cantidadDinero;
