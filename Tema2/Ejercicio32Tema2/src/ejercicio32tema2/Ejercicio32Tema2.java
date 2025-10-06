@@ -23,7 +23,7 @@ public class Ejercicio32Tema2 {
         int billeteDiez;
         int billeteCinco;
         int monedasDos;
-        int monedasUnos;
+        int monedasUno;
         
         System.out.println("Por favor, indique una cantidad de dinero: ");
         importe = entrada.nextInt();
@@ -44,7 +44,7 @@ public class Ejercicio32Tema2 {
         monedasDos = cantidadDinero / 2;
         cantidadDinero %= 2;
         
-        int monedasUno = cantidadDinero;
+        monedasUno = cantidadDinero;
         
         System.out.println("");//Lo pongo para que haya una separacion y se vea mejor el resultado
         System.out.println(importe + " Euros se descomponen en " + billeteCincuenta + " billetes de 50, " + billeteVeinte + " billetes de 20, " + billeteDiez + " billete de 10, " + billeteCinco + " billete de 5, " + monedasDos + " monedas de 2 euros y " + monedasUno + " monedas de 1 euro");
