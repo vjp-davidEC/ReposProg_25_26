@@ -6,7 +6,7 @@ package ejercicio1tema3;
 import java.util.Scanner;
 /**
  *
- * @author alumno
+ * @author DAVID
  */
 public class Ejercicio1Tema3 {
 
@@ -14,7 +14,7 @@ public class Ejercicio1Tema3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
+       Scanner entrada = new Scanner(System.in);
         
         int numeroPedido;
         
@@ -32,4 +32,5 @@ public class Ejercicio1Tema3 {
         
     }
     
-}
+} 
+    
