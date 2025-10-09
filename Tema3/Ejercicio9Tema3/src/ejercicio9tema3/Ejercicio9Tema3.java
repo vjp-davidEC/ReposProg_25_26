@@ -16,10 +16,11 @@ public class Ejercicio9Tema3 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         
-        int numero1, menor1;
-        int numero2, menor2;
-        int numero3, menor3;
-        int numero4, menor4;
+        int numero1;
+        int numero2;
+        int numero3;
+        int numero4;
+        int aux;
         
         System.out.println("Por favor, introduzca el primer numero:");
         numero1 = entrada.nextInt();
@@ -29,134 +30,14 @@ public class Ejercicio9Tema3 {
         numero3 = entrada.nextInt();
         System.out.println("Por ultimo, introduzca un cuarto numero:");
         numero4 = entrada.nextInt();
+       
+        if (numero1 > numero2) {aux = numero1; numero1 = numero2; numero2 = aux; }
+        if (numero1 > numero3) {aux = numero1; numero1 = numero3; numero3 = aux; }
+        if (numero1 > numero4) {aux = numero1; numero1 = numero4; numero4 = aux; }
+        if (numero2 > numero3) {aux = numero2; numero2 = numero3; numero3 = aux; }
+        if (numero2 > numero4) {aux = numero2; numero2 = numero4; numero4 = aux; }
+        if (numero3 > numero4) {aux = numero3; numero3 = numero4; numero4 = aux; }
         
-        //Encontrar el menor número
-        if (numero1 <= numero2 && numero1 <= numero3 && numero1 <= numero4) {
-            menor1 = numero1;
-            //Encontrar el menor entre numero2, numero3, numero4
-            if (numero2 <= numero3 && numero2 <= numero4) {
-                menor2 = numero2;
-                if (numero3 <= numero4) {
-                    menor3 = numero3;
-                    menor4 = numero4;
-                } else {
-                    menor3 = numero4;
-                    menor4 = numero3;
-                }
-            } else if (numero3 <= numero2 && numero3 <= numero4) {
-                menor2 = numero3;
-                if (numero2 <= numero4) {
-                    menor3 = numero2;
-                    menor4 = numero4;
-                } else {
-                    menor3 = numero4;
-                    menor4 = numero2;
-                }
-            } else {
-                menor2 = numero4;
-                if (numero2 <= numero3) {
-                    menor3 = numero2;
-                    menor4 = numero3;
-                } else {
-                    menor3 = numero3;
-                    menor4 = numero2;
-                }
-            }
-        } else if (numero2 <= numero1 && numero2 <= numero3 && numero2 <= numero4) {
-            menor1 = numero2;
-            //Encontrar el menor entre numero1, numero3, numero4
-            if (numero1 <= numero3 && numero1 <= numero4) {
-                menor2 = numero1;
-                if (numero3 <= numero4) {
-                    menor3 = numero3;
-                    menor4 = numero4;
-                } else {
-                    menor3 = numero4;
-                    menor4 = numero3;
-                }
-            } else if (numero3 <= numero1 && numero3 <= numero4) {
-                menor2 = numero3;
-                if (numero1 <= numero4) {
-                    menor3 = numero1;
-                    menor4 = numero4;
-                } else {
-                    menor3 = numero4;
-                    menor4 = numero1;
-                }
-            } else {
-                menor2 = numero4;
-                if (numero1 <= numero3) {
-                    menor3 = numero1;
-                    menor4 = numero3;
-                } else {
-                    menor3 = numero3;
-                    menor4 = numero1;
-                }
-            }
-        } else if (numero3 <= numero1 && numero3 <= numero2 && numero3 <= numero4) {
-            menor1 = numero3;
-            //Encontrar el menor entre numero1, numero2, numero4
-            if (numero1 <= numero2 && numero1 <= numero4) {
-                menor2 = numero1;
-                if (numero2 <= numero4) {
-                    menor3 = numero2;
-                    menor4 = numero4;
-                } else {
-                    menor3 = numero4;
-                    menor4 = numero2;
-                }
-            } else if (numero2 <= numero1 && numero2 <= numero4) {
-                menor2 = numero2;
-                if (numero1 <= numero4) {
-                    menor3 = numero1;
-                    menor4 = numero4;
-                } else {
-                    menor3 = numero4;
-                    menor4 = numero1;
-                }
-            } else {
-                menor2 = numero4;
-                if (numero1 <= numero2) {
-                    menor3 = numero1;
-                    menor4 = numero2;
-                } else {
-                    menor3 = numero2;
-                    menor4 = numero1;
-                }
-            }
-        } else {
-            menor1 = numero4;
-            //Encontrar el menor entre numero1, numero2, numero3
-            if (numero1 <= numero2 && numero1 <= numero3) {
-                menor2 = numero1;
-                if (numero2 <= numero3) {
-                    menor3 = numero2;
-                    menor4 = numero3;
-                } else {
-                    menor3 = numero3;
-                    menor4 = numero2;
-                }
-            } else if (numero2 <= numero1 && numero2 <= numero3) {
-                menor2 = numero2;
-                if (numero1 <= numero3) {
-                    menor3 = numero1;
-                    menor4 = numero3;
-                } else {
-                    menor3 = numero3;
-                    menor4 = numero1;
-                }
-            } else {
-                menor2 = numero3;
-                if (numero1 <= numero2) {
-                    menor3 = numero1;
-                    menor4 = numero2;
-                } else {
-                    menor3 = numero2;
-                    menor4 = numero1;
-                }
-            }
-        }
-
-        System.out.println("El orden de los numeros introducidos es el " + menor1 + "-" + menor2 + "-" + menor3 + "-" + menor4);
+        System.out.println("El orden de los numeros introducidos es el " + numero1 + "-" + numero2 + "-" + numero3 + "-" + numero4);
     }
 }
