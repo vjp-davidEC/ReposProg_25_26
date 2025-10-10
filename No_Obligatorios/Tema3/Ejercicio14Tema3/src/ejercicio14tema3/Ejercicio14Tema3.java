@@ -15,14 +15,13 @@ public class Ejercicio14Tema3 {
      */
     public static void main(String[] args) {
         
-        int numeroParesImpresos = 0;
+        int numeroParesImpresos = 0;//Contador de los numeros pares impresos
         int numero = 0;//Es el primer numero par
         
         while (numeroParesImpresos <= 100){//Lo pongo para que tambien entre el 100
             System.out.println(numero);
             numero += 2;//Lo que hace es que se sume 2 para sacar el siguiente numero par
-            numeroParesImpresos++;//Incrementa los 100 primeros pares impresos
+            numeroParesImpresos++;
         }
     }
-    
 }

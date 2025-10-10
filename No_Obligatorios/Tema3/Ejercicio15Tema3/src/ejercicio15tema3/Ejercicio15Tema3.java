@@ -28,5 +28,4 @@ public class Ejercicio15Tema3 {
             System.out.println(numero + "x" + i + "=" + resultado);//Resultado
         }
     }
-    
 }

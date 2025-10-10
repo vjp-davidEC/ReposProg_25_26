@@ -17,7 +17,7 @@ public class Ejercicio11Tema3 {
         int i;
         
         for (i = 1; i <= 6; i++){
-            System.out.print(" -Hola" + i + "-");
+            System.out.print(" -Hola" + i + "-");//Resultado
         }
     }
 }
