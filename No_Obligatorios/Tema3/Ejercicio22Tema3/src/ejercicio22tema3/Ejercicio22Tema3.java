@@ -17,19 +17,19 @@ public class Ejercicio22Tema3 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         
-        double numero1;
-        double numero2;
-        double resultado;
+        int numero1;
+        int numero2;
+        int resultado;
         
         try {
             System.out.print("Introduce el primer numero: ");//Lo que tiene que poner el usuario
-            numero1 = entrada.nextDouble();
+            numero1 = entrada.nextInt();
             
             System.out.print("Introduce el segundo numero: ");
-            numero2 = entrada.nextDouble();
+            numero2 = entrada.nextInt();
             
             resultado = numero1 + numero2;
-            System.out.println("El resultado de la division es: " + resultado);//Resultado
+            System.out.println("El resultado de la suma es: " + resultado);//Resultado
         } catch (Exception e) {
             System.out.println("Error: Debes introducir solo numeros");//Error
         }
