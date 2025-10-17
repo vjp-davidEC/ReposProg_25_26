@@ -17,14 +17,14 @@ public class Ejercicio27Tema3 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         
-        double numero1;
-        double numero2;
+        int numero1;
+        int numero2;
         int opcion;
         
         System.out.print("Introduce el primer numero: ");//Lo que tiene que poner el usuario
-        numero1 = entrada.nextDouble();
+        numero1 = entrada.nextInt();
         System.out.print("Introduce el primer numero: ");
-        numero2 = entrada.nextDouble();
+        numero2 = entrada.nextInt();
         
         do {
             System.out.println("\n1. Sumar los numeros");//El menu de lo que quiere hacer
@@ -48,19 +48,16 @@ public class Ejercicio27Tema3 {
                     break;
                 case 4:
                     try {
-                        if (numero2 == 0) {
-                            System.out.println("No se puede dividir entre 0");
-                        }
                         System.out.println("La division es: " + (numero1 / numero2));//DIVISION
                     } catch (ArithmeticException e) {
-                        System.out.println("Error: " + e.getMessage());//ERROR
+                        System.out.println("No se puede dividir entre 0");//ERROR
                     }
                     break;
                 case 5:
                     System.out.println("Saliendo del programa...");//SALIR
                     break;
                 default:
-                    System.out.println("Opcion no valida. Intenta de nuevo");//REPETIR
+                    System.out.println("Opcion no valida, intentalo de nuevo...");//REPETIR
             }
         } while (opcion !=5);//Que solo es hasta el 5
     }
