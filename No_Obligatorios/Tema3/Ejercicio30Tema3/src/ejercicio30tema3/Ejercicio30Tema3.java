@@ -21,9 +21,9 @@ public class Ejercicio30Tema3 {
         while (intentosUsuario != numeroSecreto) {
             System.out.print("Por favor, introduce un numero para averiguarlo: ");
             try {
-                intentosUsuario = Integer.parseInt(entrada.nextLine());//Lee la línea completa
+                intentosUsuario = entrada.nextInt();//Lee la línea completa
                 intentos++;
-
+                
                 if (intentosUsuario < numeroSecreto) {
                     System.out.println("El numero es mayor");
                 } else if (intentosUsuario > numeroSecreto) {
