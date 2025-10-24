@@ -17,24 +17,21 @@ public class Ejercicio21Tema3 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         
-        double numero1;
-        double numero2;
-        double resultado;
+        int numero1;
+        int numero2;
+        int resultado;
         
         System.out.print("Introduce el primer numero: ");//Lo que tiene que poner el usuario
-        numero1 = entrada.nextDouble();
+        numero1 = entrada.nextInt();
             
         System.out.print("Introduce el segundo numero: ");
-        numero2 = entrada.nextDouble();
+        numero2 = entrada.nextInt();
         
         try {
-            if (numero2 == 0) {
-                System.out.println("Error: No se puede dividir entre 0");//Error
-            }
             resultado = numero1 / numero2;
             System.out.println("El resultado de la division es: " + resultado);//Resultado
         } catch (ArithmeticException e) {
-            System.out.println("Error: " + e.getMessage());//Error en el catch
+            System.out.println("Error: No se puede dividir entre 0");//Error con catch
         }
     }
 }
