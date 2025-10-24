@@ -15,8 +15,7 @@ public class Ejercicio2Tema4 {
      */
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        Operaciones op = new Operaciones();//Crea una clase
-        
+                
         int numero1;
         int numero2;
         int resultado;
@@ -27,11 +26,9 @@ public class Ejercicio2Tema4 {
         numero2 = entrada.nextInt();
         
         if (numero1 > 10) {//Multiplicar si es mayor a 10
-            resultado = op.multiplicar(numero1, numero2);//Llama al metodo multiplicar
-            System.out.println("La operacion que se realizo es producto y el resultado es " + resultado);
+            Operaciones.multiplicar(numero1, numero2);//Llama al metodo multiplicar
         } else {//Sumar si es menor a 10
-            resultado = op.sumar(numero1, numero2);//Llama al metodo sumar
-            System.out.println("La operacion que se realizo es suma y el resultado es " + resultado);
+            Operaciones.sumar(numero1, numero2);//Llama al metodo sumar
         }
     }
 }
