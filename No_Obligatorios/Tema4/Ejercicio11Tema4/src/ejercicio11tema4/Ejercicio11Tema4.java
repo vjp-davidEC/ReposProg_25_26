@@ -15,27 +15,27 @@ public class Ejercicio11Tema4 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int numero = pedirNumero();
-        double raiz = calcularRaiz(numero);
-        mostrarResultado(numero, raiz);
+        int numero = pedirNumero();//Es el metodo al que hemos llamado para obtener un numero valido del usuario
+        double raiz = calcularRaiz(numero);//Es el metodo al que hemos llamado para obtener la raiz cuadrada del numero
+        mostrarResultado(numero, raiz);//Es el metodo al que hemos llamado para mostrar el numero y su raiz cuadrada
     }
     public static int pedirNumero() {
         Scanner entrada = new Scanner(System.in);
         int numero;
-        do {
-            System.out.print("Por favor, introduce un numero para calcular la raiz cuadrada: ");
+        do {//Hacemos un bucle para que se repita mientras el numero sea negativo
+            System.out.print("Por favor, introduce un numero para calcular la raiz cuadrada: ");//Lo que pedimos al usuario
             numero = entrada.nextInt();
             
             if (numero < 0) {
-                System.out.println("Error: No se puede calcular la raiz cuadrada de un numero negativo");
+                System.out.println("Error: No se puede calcular la raiz cuadrada de un numero negativo");//Error al ser negativo
             } 
-        } while (numero < 0);
-        return numero;
+        } while (numero < 0);//Repetir si el numero es menor que 0
+        return numero;//Devolver el numero valido al metodo
         }
     public static double calcularRaiz (double numero) {
-        return Math.sqrt(numero);
+        return Math.sqrt(numero);//Devolver la raiz cuadrada al metodo con la clase Math
     }
     public static void mostrarResultado (int numero, double raiz) {
-        System.out.println("La raiz cuadrada de " + numero + " es: " + raiz);
+        System.out.println("La raiz cuadrada de " + numero + " es: " + raiz);//Resultado
     }
 }
