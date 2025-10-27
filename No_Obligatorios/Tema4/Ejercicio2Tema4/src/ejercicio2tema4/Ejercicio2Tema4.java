@@ -18,7 +18,6 @@ public class Ejercicio2Tema4 {
                 
         int numero1;
         int numero2;
-        int resultado;
         
         System.out.print("Por favor, introduzca un numero: ");//Pedir el primer numero
         numero1 = entrada.nextInt();
