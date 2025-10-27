@@ -34,35 +34,22 @@ public class Ejercicio7Tema4 {
     }
     public static void ordenarNumeros(int numero1, int numero2, int numero3, int numero4) {
         int aux;//Variable auxiliar para intercambiar valores
+        int i;
         
-        if (numero1 > numero2) {//Primera pasada de comparaciones
-            aux = numero1;
-            numero1 = numero2;
-            numero2 = aux;
-        } if (numero2 > numero3) {
-            aux = numero2;
-            numero2 = numero3;
-            numero3 = aux;
-        } if (numero3 > numero4) {
-            aux = numero3;
-            numero3 = numero4;
-            numero4 = aux;
-        }
-        
-        if (numero1 > numero2) {//Segunda pasada
-            aux = numero1;
-            numero1 = numero2;
-            numero2 = aux;
-        } if (numero2 > numero3) {
-            aux = numero2;
-            numero2 = numero3;
-            numero3 = aux;
-        }
-        
-        if (numero1 > numero2) {//Tercera pasada
-            aux = numero1;
-            numero1 = numero2;
-            numero2 = aux;
+        for (i=1; i<=3; i++) {//Bucle con un for
+            if (numero1 > numero2) {//Pasadas para las comparaciones
+                aux = numero1;
+                numero1 = numero2;
+                numero2 = aux;
+            } if (numero2 > numero3) {
+                aux = numero2;
+                numero2 = numero3;
+                numero3 = aux;
+            } if (numero3 > numero4) {
+                aux = numero3;
+                numero3 = numero4;
+                numero4 = aux;
+            }
         }
         System.out.println("El orden de los numeros introducidos es el: " + numero1 + " - " + numero2 + " - " + numero3 + " - " + numero4);//Resultado
     }
