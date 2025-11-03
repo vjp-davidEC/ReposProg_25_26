@@ -24,24 +24,31 @@ public class Ejercicio19Tema4 {
     }
     public static void mostrarPosicionDia(String dia) {//Metodo que muestra por un switch los casos que puede haber del Lunes al Domingo
         switch (dia) {
+            case "lunes":
             case "Lunes":
                 System.out.println(dia + " es el primer dia de la semana");
                 break;
+            case "martes":
             case "Martes":
                 System.out.println(dia + " es el segundo dia de la semana");
                 break;
+            case "miercoles":
             case "Miercoles":
                 System.out.println(dia + " es el tercer dia de la semana");
                 break;
+            case "jueves":
             case "Jueves":
                 System.out.println(dia + " es el cuarto dia de la semana");
                 break;
+            case "viernes":
             case "Viernes":
                 System.out.println(dia + " es el quinto dia de la semana");
                 break;
+            case "sabado":
             case "Sabado":
                 System.out.println(dia + " es el sexto dia de la semana");
                 break;
+            case "domingo":
             case "Domingo":
                 System.out.println(dia + " es el septimo dia de la semana");
                 break;
