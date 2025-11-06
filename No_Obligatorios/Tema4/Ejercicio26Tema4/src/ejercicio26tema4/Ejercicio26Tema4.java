@@ -28,14 +28,13 @@ public class Ejercicio26Tema4 {
         }
     }
     public static boolean esPrimo(int numero) {//Metodo que determina si en numero es primo
-        if (numero <= 1) {//Si el numero es menor o igual a 1 no es primo
-            return false;//Devolver flase al metodo
-        }
-        for (int i = 2; i < numero; i++) {//Comprobar si el numero tiene algun divisor entre 2 y el numero
+        boolean esPrimo = true;
+        int i = 2;
+        
+        while (i < numero && esPrimo)
             if (numero % i == 0) {
-                return false;//Si tiene divisor, no es primo
+                esPrimo = false;
             }
-        }
-        return true;//Si no tiene divisores, es primo
+        return esPrimo;
     }
 }
