@@ -17,7 +17,19 @@ public class Bicicleta {
     private int antiguedad;
     
     //Constructores
-    //Lo veremos más adelante
+    public Bicicleta(){
+        marca = "";
+        color = "";
+        tipo = "";
+        antiguedad = 0;
+    }
+    
+    public Bicicleta(String m, String c, String t, int a){
+        marca = m;
+        color = c;
+        tipo = t;
+        antiguedad = a;
+    }
     
     //Getters//Setters
     public String getMarca() {
@@ -67,5 +79,12 @@ public class Bicicleta {
         System.out.println("Tipo: " + tipo);
         System.out.println("Antiguedad: " + antiguedad);
     }
+
+    @Override
+    public String toString() {
+        return "Bicicleta{" + "\nmarca=" + marca + ", color=" + color + ", tipo=" + tipo + ", antiguedad=" + antiguedad + '}';
+    }
+    
+    
     
 }

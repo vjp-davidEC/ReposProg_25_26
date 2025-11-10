@@ -21,22 +21,18 @@ public class PruebaTema5 {
         bici1.setTipo("Montania");
         bici1.setAntiguedad(6);
         
-        Bicicleta bici2 = new Bicicleta();
-        bici2.setMarca("Canondale");
-        bici2.setColor("Roja");
-        bici2.setTipo("Carretera");
-        bici2.setAntiguedad(15);
+        Bicicleta bici2 = new Bicicleta("Canondale", "Roja", "Carretera", 15);
         
         System.out.println("");
         
         bici1.mostraBicicleta();
         System.out.println("");
-        bici2.mostraBicicleta();
-        System.out.println("");
         
-        bici1.mostrarAntiguedad();
-        bici2.mostrarAntiguedad();
+        System.out.print(bici2.toString());
+        //System.out.println(bici2);
         
+        //System.out.println("");
+        //bici1.mostrarAntiguedad();
+        //bici2.mostrarAntiguedad();
     }
-    
 }
