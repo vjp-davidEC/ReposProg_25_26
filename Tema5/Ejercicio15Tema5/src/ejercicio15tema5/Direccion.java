@@ -16,6 +16,13 @@ public class Direccion {
     private String ciudad;
     
     //Constructor que inicializa los atributos con los valores recibidos como parámetros
+    public Direccion(){
+        calle = "";
+        numero = 0;
+        puerta = "";
+        ciudad = "";
+    }
+    
     public Direccion(String c, int n, String p, String ciu){
         calle = c;
         numero = n;
@@ -39,4 +46,12 @@ public class Direccion {
     public String getCiudad(){
         return ciudad;
     }
+    
+    //Mostrar
+    public void mostrarDireccion(){
+        System.out.println(calle);
+        System.out.println(numero);
+        System.out.println(puerta);
+        System.out.println(ciudad);
+    } 
 }

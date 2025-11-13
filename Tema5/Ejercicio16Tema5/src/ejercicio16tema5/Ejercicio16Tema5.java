@@ -28,10 +28,10 @@ public class Ejercicio16Tema5 {
         
         //Mostrar la informacion de cada alumno
         System.out.println("");
-        alu1.mostrar();
+        alu1.mostrarAlumno();
         System.out.println("");
-        alu2.mostrar();
+        alu2.mostrarAlumno();
         System.out.println("");
-        alu3.mostrar();
+        alu3.mostrarAlumno();
     }
 }

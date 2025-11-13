@@ -14,6 +14,11 @@ public class Alumno {
     private int nota;
     
     //Constructor que inicializa el objeto
+    public Alumno(){
+        nombre = "";
+        nota = 0;
+    }
+    
     public Alumno(String n, int no){
         nombre = n;
         nota = no;
@@ -44,7 +49,7 @@ public class Alumno {
     }
     
     //Método que muestra los datos del alumno
-    public void mostrar(){
+    public void mostrarAlumno(){
         System.out.println("Nombre: " + nombre + "\nNota: " + nota);
         clasificar();//Llamar al método para que muestro lo que ha sacado
     }

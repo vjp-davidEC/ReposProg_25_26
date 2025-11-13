@@ -15,6 +15,12 @@ public class Empleado {
     private double tarifa;
     
     //Constructor que inicializa los atributos con los valores proporcionados
+    public Empleado(){
+        nombre = "";
+        horas = 0;
+        tarifa = 0;
+    }
+    
     public Empleado(String n, int h, double t){
         nombre = n;
         horas = h;
@@ -33,7 +39,7 @@ public class Empleado {
     }
     
     //Método que muestra los datos del empleado y su sueldo bruto
-    public void mostrar(){
+    public void mostrarEmpleado(){
         System.out.println(nombre + " trabajo " + horas + " horas, cobra " + tarifa + " euros/hora" + "\nEl sueldo bruto es de: " + calcularSueldo() + " euros");
     }
 }

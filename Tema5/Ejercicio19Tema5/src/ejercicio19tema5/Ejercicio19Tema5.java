@@ -28,8 +28,8 @@ public class Ejercicio19Tema5 {
         Empleado emp3 = new Empleado(entrada.nextLine(), entrada.nextInt(), entrada.nextDouble());
         
         //Mostrar los datos y el suedo de cada empleado
-        emp1.mostrar();
-        emp2.mostrar();
-        emp3.mostrar();
+        emp1.mostrarEmpleado();
+        emp2.mostrarEmpleado();
+        emp3.mostrarEmpleado();
     }
 }
