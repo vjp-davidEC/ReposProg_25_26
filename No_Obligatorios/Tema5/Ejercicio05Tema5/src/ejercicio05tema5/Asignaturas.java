@@ -14,6 +14,16 @@ public class Asignaturas {
     private double nota;
     
     //Constructor que inicializa la asignatura con un nombre
+    public Asignaturas(){
+        nombre = "";
+        nota = 0;
+    }
+    
+    public Asignaturas(String n, double no){
+        nombre = n;
+        nota = no;
+    }
+    
     public Asignaturas(String n){
         nombre = n;
     }
@@ -35,5 +45,11 @@ public class Asignaturas {
     //Método para calcular la media
     public static double calcularMedia(double num1, double num2, double num3, double num4, double num5, double num6){
         return (num1 + num2 + num3 + num4 + num5 + num6) / 6;
+    }
+    
+    //Mostrar
+    public void mostrarAsignaturas(){
+        System.out.println(nombre);
+        System.out.println(nota);
     }
 }

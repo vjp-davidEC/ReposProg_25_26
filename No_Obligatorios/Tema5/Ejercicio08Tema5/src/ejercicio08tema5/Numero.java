@@ -13,6 +13,10 @@ public class Numero {
     private int valor;
     
     //Constructor que inicializa el objeto
+    public Numero(){
+        valor = 0;
+    }
+    
     public Numero(int v){
         valor = v;
     }
@@ -20,5 +24,10 @@ public class Numero {
     //Método getter que devuelve el valor almacenado al atributo
     public int getValor(){
         return valor;
+    }
+    
+    //Mostrar
+    public void mostrarNumero(){
+        System.out.println(valor);
     }
 }

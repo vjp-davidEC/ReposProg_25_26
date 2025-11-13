@@ -14,6 +14,11 @@ public class Enunciado {
     private String respuesta;
     
     //Constructor que inicializa los atributos con los valores recibidos
+    public Enunciado(){
+        pregunta = "";
+        respuesta = "";
+    }
+    
     public Enunciado(String p, String r){
         pregunta = p;
         respuesta = r;
@@ -31,5 +36,11 @@ public class Enunciado {
     //Método getter que devuelve el texto de la pregunta
     public String getPregunta(){
         return pregunta;
+    }
+    
+    //Mostrar
+    public void mostrarEnunciado(){
+        System.out.println(pregunta);
+        System.out.println(respuesta);
     }
 }

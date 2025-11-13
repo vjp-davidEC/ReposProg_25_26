@@ -11,9 +11,9 @@ package ejercicio13tema5;
 public class Saludo {
     //Atributo privado de la clase
     private String frase = "Hola, que tal";
-    
+            
     //Método que muestra el saludo
-    public void mostrar(){
+    public void mostrarSaludo(){
         System.out.println(frase);
     }
 }

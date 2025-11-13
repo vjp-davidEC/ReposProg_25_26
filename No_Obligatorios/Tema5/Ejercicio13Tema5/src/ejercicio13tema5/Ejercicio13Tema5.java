@@ -19,7 +19,7 @@ public class Ejercicio13Tema5 {
         
         //Bucle for que se repetira 5 veces 
         for (int i = 0; i < 5; i++){
-            sal.mostrar();//Lo que se va a imprimir 5 veces de la clase Saludo
+            sal.mostrarSaludo();//Lo que se va a imprimir 5 veces de la clase Saludo
         }
     } 
 }

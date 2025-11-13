@@ -12,6 +12,15 @@ public class Numero {
     //Atributo privado de la clase
     private int valor;
     
+    //Constructor que inicializa el objeto
+    public Numero(){
+        valor = 0;
+    }
+    
+    public Numero(int v){
+        valor = v;
+    }
+    
     //Método setter que permite asignar un valor al atributo
     public void setValor(int v){
         valor = v;
