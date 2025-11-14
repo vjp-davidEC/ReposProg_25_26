@@ -117,14 +117,10 @@ public class Bicicleta {
         System.out.println("Tipo: " + tipo);
         System.out.println("Antiguedad: " + antiguedad);
         System.out.println(propietario.toString());
-        
     }
 
     @Override
     public String toString() {
         return "Bicicleta{" + "\nMarca = " + marca + ", \nColor = " + color + ", \nTipo = " + tipo + ", \nAntiguedad = " + antiguedad + ", "+ propietario.toString() +'}' + "\n";
-    }
-    
-    
-    
+    }  
 }

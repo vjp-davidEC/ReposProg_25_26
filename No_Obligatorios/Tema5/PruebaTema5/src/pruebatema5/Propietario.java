@@ -43,7 +43,6 @@ public class Propietario {
     }
     
     //Mostrar/toString
-
     @Override
     public String toString() {
         return "Propietario{" + "nombre=" + nombre + ", edad=" + edad + '}';
