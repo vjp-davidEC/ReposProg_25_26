@@ -28,6 +28,6 @@ public class Numero {
     
     //Mostrar
     public void mostrarNumero(){
-        System.out.println(valor);
+        System.out.println(getValor());
     }
 }

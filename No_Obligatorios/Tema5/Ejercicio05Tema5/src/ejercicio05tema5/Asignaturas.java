@@ -49,7 +49,7 @@ public class Asignaturas {
     
     //Mostrar
     public void mostrarAsignaturas(){
-        System.out.println(nombre);
-        System.out.println(nota);
+        System.out.println(obtenerNombre());
+        System.out.println(obtenerNota());
     }
 }

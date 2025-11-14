@@ -10,10 +10,30 @@ package ejercicio13tema5;
  */
 public class Saludo {
     //Atributo privado de la clase
-    private String frase = "Hola, que tal";
-            
-    //Método que muestra el saludo
-    public void mostrarSaludo(){
-        System.out.println(frase);
+    private String frase;
+    
+    //Constructor
+    public Saludo() {
+        frase = "";
+    }
+    
+    public Saludo(String f){
+        frase = f;
+    }
+    
+    //Getter y Setter
+    public String getFrase() {
+        return frase;
+    }
+
+    public void setFrase(String frase) {
+        this.frase = frase;
+    }
+    
+    //Método que muestra el saludo con un bucle for
+    public void mostrarCincoSaludos(){
+        for (int i = 0; i < 5; i++){
+            System.out.println(getFrase());
+        }
     }
 }

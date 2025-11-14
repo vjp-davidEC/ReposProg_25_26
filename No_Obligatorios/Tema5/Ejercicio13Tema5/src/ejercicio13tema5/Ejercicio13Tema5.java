@@ -15,11 +15,8 @@ public class Ejercicio13Tema5 {
      */
     public static void main(String[] args) {
         //Objeto de la clase Saludo
-        Saludo sal = new Saludo();
+        Saludo sal = new Saludo("Hola, que tal");
         
-        //Bucle for que se repetira 5 veces 
-        for (int i = 0; i < 5; i++){
-            sal.mostrarSaludo();//Lo que se va a imprimir 5 veces de la clase Saludo
-        }
+        sal.mostrarCincoSaludos();//Resultado
     } 
 }

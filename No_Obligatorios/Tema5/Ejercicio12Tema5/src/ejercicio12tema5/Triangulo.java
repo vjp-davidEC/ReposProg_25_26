@@ -24,14 +24,32 @@ public class Triangulo {
         cateto2 = c2;
     }
     
+    //Getters y Setters
+    public double getCateto1() {
+        return cateto1;
+    }
+
+    public void setCateto1(double cateto1) {
+        this.cateto1 = cateto1;
+    }
+
+    public double getCateto2() {
+        return cateto2;
+    }
+
+    public void setCateto2(double cateto2) {
+        this.cateto2 = cateto2;
+    }
+    
+    
     //Método para calcular la hipotenusa con el teorema de Pitágoras
     public double calcularHipotenusa(){
-        return Math.sqrt(cateto1 * cateto1 + cateto2 * cateto2);
+        return Math.sqrt(getCateto1() * getCateto1() + getCateto2() * getCateto2());
     }
     
     //Mostrar
     public void mostrarTriangulo(){
-        System.out.println(cateto1);
-        System.out.println(cateto2);
+        System.out.println(getCateto1());
+        System.out.println(getCateto2());
     }
 }

@@ -40,7 +40,6 @@ public class Enunciado {
     
     //Mostrar
     public void mostrarEnunciado(){
-        System.out.println(pregunta);
-        System.out.println(respuesta);
+        System.out.println(getPregunta());
     }
 }

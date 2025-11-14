@@ -21,7 +21,11 @@ public class Numero {
         valor = v;
     }
     
-    //Método setter que permite asignar un valor al atributo
+    //Getter y Setter
+    public int getValor() {
+        return valor;
+    }
+    
     public void setValor(int v){
         valor = v;
     }
@@ -29,7 +33,7 @@ public class Numero {
     //Método que muestra la tabla de multiplicar del numero almacenado
     public void mostrarTabla(){
         for (int i = 0; i <= 10; i++){//Bucle for que va desde el 0 al 10
-            System.out.println(valor + " x " + i + " = " + (valor * i));//Resultado
+            System.out.println(getValor() + " x " + i + " = " + (getValor() * i));//Resultado
         }
     }
 }
