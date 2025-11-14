@@ -35,13 +35,13 @@ public class Alumno {
     
     //Método que clasifica la nota del alumno en categorías
     public void clasificar(){
-        if (nota >= 0 && nota <= 4) {//Resultado suspenso
+        if (getNota() >= 0 && getNota() <= 4) {//Resultado suspenso
           System.out.println("Suspenso");
-        } else if (nota >= 5 && nota <= 6) {//Resultado bien
+        } else if (getNota() >= 5 && getNota() <= 6) {//Resultado bien
           System.out.println("Bien");
-        } else if (nota >= 7 && nota <= 8) {//Resultado notable
+        } else if (getNota() >= 7 && getNota() <= 8) {//Resultado notable
           System.out.println("Notable");
-        } else if (nota >= 9 && nota <= 10) {//Resultado sobresaliente
+        } else if (getNota() >= 9 && getNota() <= 10) {//Resultado sobresaliente
           System.out.println("Sobresaliente");
         } else {
           System.out.println("Error: Nota invalida, debe estar entre 0 y 10");//Error
@@ -50,7 +50,7 @@ public class Alumno {
     
     //Método que muestra los datos del alumno
     public void mostrarAlumno(){
-        System.out.println("Nombre: " + nombre + "\nNota: " + nota);
+        System.out.println("Nombre: " + getNombre() + "\nNota: " + getNombre());
         clasificar();//Llamar al método para que muestro lo que ha sacado
     }
 }

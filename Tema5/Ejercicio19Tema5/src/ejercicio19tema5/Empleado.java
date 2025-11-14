@@ -27,19 +27,45 @@ public class Empleado {
         tarifa = t;
     }
     
+    //Getters y Setters
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getHoras() {
+        return horas;
+    }
+
+    public void setHoras(int horas) {
+        this.horas = horas;
+    }
+
+    public double getTarifa() {
+        return tarifa;
+    }
+
+    public void setTarifa(double tarifa) {
+        this.tarifa = tarifa;
+    }
+    
+    
     //Método que calcula el sueldo bruto del empleado y se hace con un if
     public double calcularSueldo(){
         double sueldo;
-        if (horas <= 40){
-            sueldo = horas * tarifa;
+        if (getHoras() <= 40){
+            sueldo = getHoras() * getTarifa();
         } else {
-            sueldo = 40 * tarifa + (horas - 40) * tarifa * 1.5;
+            sueldo = 40 * getTarifa() + (getHoras() - 40) * getTarifa() * 1.5;
         }
         return sueldo;
     }
     
     //Método que muestra los datos del empleado y su sueldo bruto
     public void mostrarEmpleado(){
-        System.out.println(nombre + " trabajo " + horas + " horas, cobra " + tarifa + " euros/hora" + "\nEl sueldo bruto es de: " + calcularSueldo() + " euros");
+        System.out.println(getHoras() + " trabajo " + getHoras() + " horas, cobra " + getTarifa() + " euros/hora" + "\nEl sueldo bruto es de: " + calcularSueldo() + " euros");
     }
 }

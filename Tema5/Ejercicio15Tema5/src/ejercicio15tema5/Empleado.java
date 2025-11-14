@@ -15,16 +15,47 @@ public class Empleado {
     private Direccion direccion;
     
     //Constructor que inicializa los atributos con los valores recibidos
-    public Empleado(String nom, int s, Direccion dir){
+    public Empleado(){
+        nombre = "";
+        salario = 0;
+        direccion = new Direccion();
+    }
+    public Empleado(String nom, int s, String calleDirecc, int salarioDirecc, String puertaDirecc, String ciudadDirecc){
         nombre = nom;
         salario = s;
-        direccion = dir;
+        direccion = new Direccion(calleDirecc, salarioDirecc, puertaDirecc, ciudadDirecc);
+    }
+    
+    //Getters y Setters
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getSalario() {
+        return salario;
+    }
+
+    public void setSalario(int salario) {
+        this.salario = salario;
+    }
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
     }
     
     //Método que muestra los datos del empleado con los métodos de la clase Direccion
     public void mostrarDatos(){
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Salario: " + salario);
-        System.out.println("Direccion: " + direccion.getCalle() + ", " + direccion.getNumero() + ", " + direccion.getPuerta() + ", " + direccion.getCiudad());
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Salario: " + getSalario());
+        System.out.println("Direccion: ");
+        direccion.mostrarDireccion();
     }
 }

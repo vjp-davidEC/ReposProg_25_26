@@ -49,9 +49,9 @@ public class Direccion {
     
     //Mostrar
     public void mostrarDireccion(){
-        System.out.println(calle);
-        System.out.println(numero);
-        System.out.println(puerta);
-        System.out.println(ciudad);
+        System.out.println("      Calle: " + getCalle());
+        System.out.println("      Numero: " + getNumero());
+        System.out.println("      Puerta: " + getPuerta());
+        System.out.println("      Ciudad: " + getCiudad());
     } 
 }
