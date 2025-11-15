@@ -2,16 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package ejercicio20tema5;
-
+package ejercicio21tema5;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
  *
- * @author alumno
+ * @author DAVID
  */
-public class Ejercicio20Tema5 {
+public class Ejercicio21Tema5 {
 
     /**
      * @param args the command line arguments
@@ -30,16 +29,20 @@ public class Ejercicio20Tema5 {
             
             switch (opcion){//Evaluar la opcion elegida mediante un switch
                 case 1:
-                    cuenta = new Cuenta();
+                    System.out.print("Ingrese clave para la cuenta: ");
+                    String clave1 = entrada.nextLine();
+                    cuenta = new CuentaClave(clave1);
                     cuentaCreada = true;
-                    System.out.println("Tu cuenta ya esta creada");
+                    System.out.println("Tu cuenta ya esta creada con tu clave");
                     break;
                 case 2:
                     System.out.print("Ingrese saldo inicial: ");
                     float saldoInicial = entrada.nextFloat();
-                    cuenta = new Cuenta(saldoInicial);
+                    System.out.println("Ingrese clave para la cuenta: ");
+                    String clave2 = entrada.nextLine();
+                    cuenta = new CuentaClave(saldoInicial, clave2);
                     cuentaCreada = true;
-                    System.out.println("Cuenta creada con saldo: " + saldoInicial);
+                    System.out.println("Cuenta creada con saldo y con tu clave");
                     break;
                 case 3:
                     if(cuentaCreada){
