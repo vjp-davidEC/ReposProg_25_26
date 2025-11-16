@@ -55,6 +55,5 @@ public class Repaso03Tema5 {
 
         media = sumaNotas / cantidadEstudiantes;
         System.out.println("Nota media de la clase: " + media);
-        entrada.close();
     }
 }
