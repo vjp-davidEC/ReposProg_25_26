@@ -284,3 +284,44 @@ public class PruebaRepasoTema1234 {
         return numero % 2 == 0;
     }
 }
+/*
+Constantes y Variables
+    Constante: public final static int VALOR_CONSTANTE = 100; → Su valor nunca cambia. Se usa para valores fijos (ejemplo: IVA, PI, etc.).
+    Variable: int miPrimeraVariable = 5; → Su valor puede cambiar durante la ejecución. Se usa para almacenar datos dinámicos.
+Operadores
+    Aritméticos: +, -, *, /, % → Suma, resta, multiplicación, división y módulo (resto). El módulo es útil para saber si un número es par/impar.
+    Relacionales y lógicos:
+        ==, !=, <, >, <=, >= → comparan valores.
+        && (AND), || (OR), ! (NOT) → combinan condiciones. Se usan en if y bucles para comprobar rangos o condiciones múltiples.
+Unarios: ++, --
+    Post-incremento (x++): primero usa el valor, luego lo incrementa.
+    Pre-incremento (++x): primero incrementa, luego usa el valor. Muy usados en bucles (for, while).
+Scanner
+    Scanner entrada = new Scanner(System.in); → Permite leer datos del usuario desde teclado.
+        nextInt(), nextDouble(), next() → leer enteros, decimales y cadenas. Se usa en programas interactivos.
+Condicionales
+    if → Evalúa una condición. Si es verdadera, ejecuta el bloque. Si es falsa, no hace nada. Se usa para comprobar algo puntual (ejemplo: si un número es par).
+    if...else → Evalúa una condición. Si es verdadera, ejecuta el bloque del if. Si es falsa, ejecuta el bloque del else. Se usa cuando hay dos caminos posibles (ejemplo: aprobado/suspendido).
+    if...else if...else → Evalúa varias condiciones en orden. El primer bloque verdadero se ejecuta, los demás se ignoran. Si ninguno es verdadero, se ejecuta el else. Se usa cuando hay varias categorías o rangos (ejemplo: niño, adolescente, adulto, mayor).
+    switch → Evalúa una variable y ejecuta un caso según su valor. Útil cuando hay muchas opciones (ejemplo: menú de días de la semana).
+Bucles
+    while → se repite mientras la condición sea verdadera.
+    do...while → se repite al menos una vez, luego evalúa la condición.
+    for → se repite un número determinado de veces. Se usan para repetir tareas (ejemplo: recorrer listas, mostrar menús).
+Manejo de errores
+    try...catch → Captura errores en tiempo de ejecución.
+        InputMismatchException → cuando el usuario introduce un tipo de dato incorrecto.
+        ArithmeticException → cuando intentas dividir entre 0. Se usa para evitar que el programa se bloquee.
+Librería Math
+    Métodos: Math.abs(), Math.sqrt(), Math.pow(), Math.max(), etc. Se usan para cálculos avanzados (raíces, potencias, redondeos).
+Random
+    Random random = new Random(); → Genera números aleatorios.
+        nextInt(1,100) → entero entre 1 y 100.
+        nextDouble(1,10) → decimal entre 1 y 10. Se usa en juegos, simulaciones, sorteos.
+Strings
+    Métodos: .toLowerCase(), .toUpperCase(), .equals(), .equalsIgnoreCase(), .length(), .charAt(). Se usan para comparar, transformar o recorrer caracteres.
+Funciones (métodos)
+    saludar(String nombre) → imprime un saludo.
+    suma(int num1, int num2) → devuelve la suma de dos números.
+    esPar(int numero) → devuelve true si el número es par. Se usan para reutilizar código y organizar mejor el programa.
+*/
