@@ -17,15 +17,16 @@ public class Repaso05Tema5 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         
+        //Variables 
         double metros;
         int opcion;
         
-        do {
+        do {//Bucle que se repite hasta que el usuario elija salir 
             System.out.print("Introduce una distancia en metros: ");
             metros = entrada.nextDouble();
-            mostrarMenu();
-            opcion = pedirOpcion();
-            switch (opcion) {
+            mostrarMenu();//Mostrar el menú de opciones 
+            opcion = pedirOpcion();//Pedir la opción al usuario 
+            switch (opcion) {//Evaluar la opción 
                 case 1:
                     System.out.println("En kilometros: " + aKilometros(metros));
                     break;
@@ -42,10 +43,10 @@ public class Repaso05Tema5 {
                     System.out.println("Opcion invalida. Intentalo de nuevoo...");
             }
             System.out.println(); // salto de línea
-        } while (opcion != 4);
+        } while (opcion != 4);//Condición de salida 
     }
     
-    public static void mostrarMenu(){
+    public static void mostrarMenu(){//Método para mostrar el menú 
         System.out.println("\n--- Conversor de Medidas ---");
         System.out.println("1. Convertir a kilometros");
         System.out.println("2. Convertir a centimetros");
@@ -54,7 +55,7 @@ public class Repaso05Tema5 {
         System.out.print("Elige una opcion: ");
     }
     
-    public static int pedirOpcion(){//Metodo para pedir el numero al usuario y si se equivoca dar un error y devolverselo
+    public static int pedirOpcion(){//Método para pedir la opción al usuario con control de errores 
         Scanner entrada = new Scanner(System.in);
         int numero = -1;
         try {
@@ -65,6 +66,7 @@ public class Repaso05Tema5 {
         return numero;
     }
     
+    //Métodos de conversión
     public static double aKilometros(double metros) {
         return metros / 1000;
     }
@@ -77,3 +79,16 @@ public class Repaso05Tema5 {
         return metros * 1000;
     }
 }
+/*
+    Scanner entrada: se usa para leer la distancia en metros.
+    do...while: mantiene el programa en ejecución hasta que el usuario elija la opción 4 (salir).
+    mostrarMenu(): imprime el menú con las opciones disponibles.
+    pedirOpcion(): lee la opción del usuario y controla errores si no introduce un número.
+    switch (opcion): ejecuta la acción correspondiente:
+        case 1: convierte metros a kilómetros.
+        case 2: convierte metros a centímetros.
+        case 3: convierte metros a milímetros.
+        case 4: termina el programa.
+        default: muestra un mensaje de error si la opción no es válida.
+    Métodos de conversión: cada uno hace la operación matemática correspondiente.
+*/
