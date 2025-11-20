@@ -50,7 +50,7 @@ public class Alumno {
     
     //Método que muestra los datos del alumno
     public void mostrarAlumno(){
-        System.out.println("Nombre: " + getNombre() + "\nNota: " + getNombre());
+        System.out.println("Nombre: " + getNombre() + "\nNota: " + getNota());
         clasificar();//Llamar al método para que muestro lo que ha sacado
     }
 }

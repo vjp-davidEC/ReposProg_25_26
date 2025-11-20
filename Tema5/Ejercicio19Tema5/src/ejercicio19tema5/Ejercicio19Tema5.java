@@ -18,18 +18,34 @@ public class Ejercicio19Tema5 {
         Scanner entrada = new Scanner(System.in);
         
         //Pedir al usuario que introduzca el nombre, las horas y la tarifa y luego se crea los objetos de la clase Empleado con los datos introducidos
-        System.out.print("Introduzca el nombre, las horas trabajadas y la tarifa por hora del primer empleado: ");
-        Empleado emp1 = new Empleado(entrada.nextLine(), entrada.nextInt(), entrada.nextDouble());
-        entrada.nextLine();
-        System.out.print("Introduzca el nombre, las horas trabajadas y la tarifa por hora del segundo empleado: ");
-        Empleado emp2 = new Empleado(entrada.nextLine(), entrada.nextInt(), entrada.nextDouble());
-        entrada.nextLine();
-        System.out.print("Introduzca el nombre, las horas trabajadas y la tarifa por hora del tercer empleado: ");
-        Empleado emp3 = new Empleado(entrada.nextLine(), entrada.nextInt(), entrada.nextDouble());
+        Empleado emp1 = new Empleado(pedirNombre(), pedirHoras(), pedirTarifa());
+        Empleado emp2 = new Empleado(pedirNombre(), pedirHoras(), pedirTarifa());
+        Empleado emp3 = new Empleado(pedirNombre(), pedirHoras(), pedirTarifa());
         
         //Mostrar los datos y el suedo de cada empleado
+        System.out.println("");
         emp1.mostrarEmpleado();
+        System.out.println("");
         emp2.mostrarEmpleado();
+        System.out.println("");
         emp3.mostrarEmpleado();
+    }
+    
+    public static String pedirNombre(){
+        Scanner entrada = new Scanner(System.in);
+        System.out.print("Introduce el nombre: ");
+        return entrada.nextLine();
+    }
+    
+    public static int pedirHoras(){
+        Scanner entrada = new Scanner(System.in);
+        System.out.print("Introduce las horas trabajadas: ");
+        return entrada.nextInt();
+    }
+    
+    public static double pedirTarifa(){
+        Scanner entrada = new Scanner(System.in);
+        System.out.print("Introduce el salario: ");
+        return entrada.nextDouble();
     }
 }
