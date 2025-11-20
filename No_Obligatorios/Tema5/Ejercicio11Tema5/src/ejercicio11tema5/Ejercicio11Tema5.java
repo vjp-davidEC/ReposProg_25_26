@@ -14,23 +14,31 @@ public class Ejercicio11Tema5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        
         //Objetos de la clase Numero sin valor inicial
         Numero num1 = new Numero();
+        num1.setNumero(pedirNumero());
         Numero num2 = new Numero();
-        
-        //Pedir al usuario que introduzca los dos numeros y asignarle el valor introducido al objeto
-        System.out.print("Introduzca el primer numero: ");
-        num1.setNumero(entrada.nextInt());
-        System.out.print("Introduzca el segundo numero: ");
-        num2.setNumero(entrada.nextInt());
+        num2.setNumero(pedirNumero());
         
         //Condicion de si el primer numero es mayor que 10 mostrar una multiplicacion, sino mostrar una suma
         if (num1.getValor() > 10){
-            System.out.println("La multiplicacion es: " + (num1.getValor() * num2.getValor()));
+            System.out.println("La multiplicacion es: " + multiplicar(num1.getValor(), num2.getValor()));
         } else {
-            System.out.println("La suma es: " + (num1.getValor() + num2.getValor()));
+            System.out.println("La suma es: " + sumar(num1.getValor(), num2.getValor()));
         }
-    } 
+    }
+    
+    public static int pedirNumero(){
+        Scanner entrada = new Scanner(System.in);
+        System.out.print("Introduce numero: ");
+        return entrada.nextInt();
+    }
+    
+    public static int multiplicar(int num1, int num2){
+        return num1 * num2;
+    }
+    
+    public static int sumar(int num1, int num2){
+        return num1 + num2;
+    }
 }

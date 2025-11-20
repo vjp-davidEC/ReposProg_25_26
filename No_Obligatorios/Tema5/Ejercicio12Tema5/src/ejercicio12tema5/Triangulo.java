@@ -39,13 +39,7 @@ public class Triangulo {
 
     public void setCateto2(double cateto2) {
         this.cateto2 = cateto2;
-    }
-    
-    
-    //Método para calcular la hipotenusa con el teorema de Pitágoras
-    public double calcularHipotenusa(){
-        return Math.sqrt(getCateto1() * getCateto1() + getCateto2() * getCateto2());
-    }
+    }  
     
     //Mostrar
     public void mostrarTriangulo(){

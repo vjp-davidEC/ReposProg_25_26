@@ -15,15 +15,18 @@ public class Ejercicio14Tema5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
         
-        //Objeto de la clase Numero
+        
+        //Objeto de la clase Numero, pedir al usuario que introduzca un numero y se asigne el numero al objeto
         Numero n = new Numero();
-        
-        //Pedir al usuario que introduzca un numero y se asigne el numero al objeto
-        System.out.print("Introduce un numero: ");
-        n.setValor(entrada.nextInt());
+        n.setValor(pedirNumero());
         
         n.mostrarTabla();//Llamar al método mostrarTabla para imprimir la tabla del numero introducido por el usuario
+    }
+    
+    public static int pedirNumero(){
+        Scanner entrada = new Scanner(System.in);
+        System.out.print("Introduce numero: ");
+        return entrada.nextInt();
     }
 }

@@ -27,33 +27,38 @@ public class Ejercicio17Tema5 {
         
         //Mostrar las preguntas y recoger la respuesta del usuario
         System.out.print(enun1.getPregunta());
-        String r1 = entrada.nextLine();
+        String r1 = pedirRespuesta();
         if (r1.equalsIgnoreCase("Madrid")){
             nota += 2.5;
         }
         enun1.comprobar(r1);
         
         System.out.print(enun2.getPregunta());
-        String r2 = entrada.nextLine();
+        String r2 = pedirRespuesta();
         if (r2.equalsIgnoreCase("Colon")){
             nota += 2.5;
         }
         enun2.comprobar(r2);
         
         System.out.print(enun3.getPregunta());
-        String r3 = entrada.nextLine();
+        String r3 = pedirRespuesta();
         if (r3.equalsIgnoreCase("25")){
             nota += 2.5;
         }
         enun3.comprobar(r3);
         
         System.out.print(enun4.getPregunta());
-        String r4 = entrada.nextLine();
+        String r4 = pedirRespuesta();
         if (r4.equalsIgnoreCase("Azul")){
             nota += 2.5;
         }
         enun4.comprobar(r4);
         
         System.out.println("La nota final es: " + nota);//Resultado
+    }
+    
+    public static String pedirRespuesta(){
+        Scanner entrada = new Scanner(System.in);
+        return entrada.nextLine();
     }
 }

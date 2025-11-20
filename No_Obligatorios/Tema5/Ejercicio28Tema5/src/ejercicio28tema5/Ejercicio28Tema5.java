@@ -21,13 +21,13 @@ public class Ejercicio28Tema5 {
         //Pedir al usuario la distancia recorrida, los litros de combustibles consumidos, la velocidad media y el precio de la gasolina por litro
         System.out.println("Introduce los datos del viaje");
         System.out.print("Kilometros recorridos: ");
-        kms = entrada.nextDouble();
+        kms = pedirNumero();
         System.out.print("Litros consumidos:  ");
-        litros = entrada.nextDouble();
+        litros = pedirNumero();
         System.out.print("Velocidad media (km/h): ");
-        vmed = entrada.nextDouble();
+        vmed = pedirNumero();
         System.out.print("Precio de la gasolina (euros/litro): ");
-        pgas = entrada.nextDouble();
+        pgas = pedirNumero();
         
         Consumo viaje = new Consumo(kms, litros, vmed, pgas);//Objeto Consumo que se crea con los datos introducidos
         
@@ -35,5 +35,10 @@ public class Ejercicio28Tema5 {
         System.out.println("Tiempo realizado: " + viaje.getTiempo());//Tiempo total del viaje
         System.out.println("Consumo medio: " + viaje.consumoMedio());//Consumo medio en litros cada 100km
         System.out.println("Consumo medio: " + viaje.consumoEuros());//Consumo medio en euros cada 100km
+    }
+    
+    public static double pedirNumero(){
+        Scanner entrada = new Scanner(System.in);
+        return entrada.nextDouble();
     }
 }

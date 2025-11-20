@@ -17,8 +17,6 @@ public class Ejercicio20Tema5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        
         //Declarar un objeto Cuenta y una variable booleana para controlar si la cuenta está creada
         Cuenta cuenta = new Cuenta();
         boolean cuentaCreada = false;
@@ -36,7 +34,7 @@ public class Ejercicio20Tema5 {
                     break;
                 case 2:
                     System.out.print("Ingrese saldo inicial: ");
-                    float saldoInicial = entrada.nextFloat();
+                    float saldoInicial = pedirInformacion();
                     cuenta = new Cuenta(saldoInicial);
                     cuentaCreada = true;
                     System.out.println("Cuenta creada con saldo: " + saldoInicial);
@@ -44,7 +42,7 @@ public class Ejercicio20Tema5 {
                 case 3:
                     if(cuentaCreada){
                         System.out.print("Cantidad a ingresar: ");
-                        float ingreso = entrada.nextFloat();
+                        float ingreso = pedirInformacion();
                         cuenta.ingresar(ingreso);
                         System.out.println("Ingreso realizado");
                     }else{
@@ -54,7 +52,7 @@ public class Ejercicio20Tema5 {
                 case 4:
                     if(cuentaCreada){
                         System.out.print("Cantidad a extraer: ");
-                        float retiro = entrada.nextFloat();
+                        float retiro = pedirInformacion();
                         cuenta.extraer(retiro);
                         System.out.println("Extraccion realizada");
                     }else{
@@ -96,5 +94,10 @@ public class Ejercicio20Tema5 {
             entrada.next();//Limpiar el buffer
             return -1;//Devolver -1 para indicar opcion invalida
         }
+    }
+    
+    public static float pedirInformacion(){
+        Scanner entrada = new Scanner(System.in);
+        return entrada.nextFloat();
     }
 }

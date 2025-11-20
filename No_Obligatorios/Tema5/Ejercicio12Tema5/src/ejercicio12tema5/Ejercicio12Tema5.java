@@ -14,16 +14,22 @@ public class Ejercicio12Tema5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        
-        //Pedir al usuario que introduzca los dos valores y que se guarde los valores en las variables
-        System.out.print("Introduza el primer cateto: ");
-        double c1 = entrada.nextDouble();
-        System.out.print("Introduzca el segundo cateto: ");
-        double c2 = entrada.nextDouble();
+        double c1 = pedirNumero();
+        double c2 = pedirNumero();
         
         //Objeto de la clase Triangulo con los valores y calcula la hipotenusa con un método
         Triangulo tri = new Triangulo(c1, c2);
-        System.out.println("La hipotenusa es: " + tri.calcularHipotenusa());
+        System.out.println("La hipotenusa es: " + calcularHipotenusa(tri.getCateto1(), tri.getCateto2()));
+    }
+    
+    //Métodos para pedir y calcular
+    public static double pedirNumero(){
+        Scanner entrada = new Scanner(System.in);
+        System.out.print("Introduce numero: ");
+        return entrada.nextDouble();
+    }
+    
+    public static double calcularHipotenusa(double c1, double c2){
+        return Math.sqrt(c1 * c1 + c2 * c2);
     }
 }
