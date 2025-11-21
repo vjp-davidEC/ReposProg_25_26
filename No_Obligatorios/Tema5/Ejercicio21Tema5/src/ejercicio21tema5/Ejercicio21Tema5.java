@@ -29,7 +29,7 @@ public class Ejercicio21Tema5 {
                 case 1:
                     System.out.print("Ingrese clave para la cuenta: ");
                     String clave1 = pedirString();
-                    cuenta = new CuentaClave(clave1);
+                    cuenta = new CuentaClave();
                     cuentaCreada = true;
                     System.out.println("Tu cuenta ya esta creada con tu clave");
                     break;

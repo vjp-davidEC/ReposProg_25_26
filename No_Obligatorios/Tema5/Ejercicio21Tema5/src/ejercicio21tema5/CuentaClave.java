@@ -14,17 +14,13 @@ public class CuentaClave extends Cuenta{//Clase que se hereda de Cuenta
     
     //Constructores
     public CuentaClave(){
-        clave = "";
-    }
-    
-    public CuentaClave(String c){
         super();//Se pone para llamar al constructor de la clase Cuenta sin parámetros
-        clave = c;
+        clave = "";
     }
     
     public CuentaClave(float s, String c){
         super(s);//Se pone para llamar al constructor de la clase Cuenta con parámetro
-        this.clave = c;
+        clave = c;
     }
     
     //Getter y setter
@@ -33,7 +29,7 @@ public class CuentaClave extends Cuenta{//Clase que se hereda de Cuenta
     }
 
     public void setClave(String c) {
-        this.clave = c;
+        clave = c;
     }
     
     //Mostrar
