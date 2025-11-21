@@ -20,10 +20,10 @@ public class Empleado {
         salario = 0;
         direccion = new Direccion();
     }
-    public Empleado(String nom, int s, String calleDirecc, int salarioDirecc, String puertaDirecc, String ciudadDirecc){
+    public Empleado(String nom, int s, String calleDirecc, int numeroDirecc, String puertaDirecc, String ciudadDirecc){
         nombre = nom;
         salario = s;
-        direccion = new Direccion(calleDirecc, salarioDirecc, puertaDirecc, ciudadDirecc);
+        direccion = new Direccion(calleDirecc, numeroDirecc, puertaDirecc, ciudadDirecc);
     }
     
     //Getters y Setters
