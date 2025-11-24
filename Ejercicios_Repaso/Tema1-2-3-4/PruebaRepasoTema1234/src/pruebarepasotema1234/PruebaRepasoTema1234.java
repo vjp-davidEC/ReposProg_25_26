@@ -284,6 +284,7 @@ public class PruebaRepasoTema1234 {
         return numero % 2 == 0;
     }
 }
+
 /*
 Constantes y Variables
     Constante: public final static int VALOR_CONSTANTE = 100; → Su valor nunca cambia. Se usa para valores fijos (ejemplo: IVA, PI, etc.).
