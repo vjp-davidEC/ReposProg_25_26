@@ -8,27 +8,29 @@ package ejercicio01tema6;
  *
  * @author alumno
  */
-public class Calculadora {
+public abstract class Calculadora {
     //Atributo
-    private int numero;
+    private double numero;
     
     //Constructores
     public Calculadora(){
         numero = 0;
     }
     
-    public Calculadora(int numero) {
+    public Calculadora(double numero) {
         this.numero = numero;
     }
     
     //Getter/Setter
-    public int getNumero() {
+    public double getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(double numero) {
         this.numero = numero;
     }
+    
+    public abstract void realizarOperacion();
     
     //Mostrar
     @Override
