@@ -9,10 +9,12 @@ package ejercicio04tema6;
  * @author DAVID
  */
 public abstract class Animal {
+    //Atributos
     private String nombre;
     private int edad;
     private double peso;
     
+    //Constructores
     public Animal() {
         nombre = "";
         edad = 0;
@@ -25,6 +27,7 @@ public abstract class Animal {
         this.peso = peso;
     }
 
+    //Getters/Setters
     public String getNombre() {
         return nombre;
     }
@@ -48,7 +51,8 @@ public abstract class Animal {
     public void setPeso(double peso) {
         this.peso = peso;
     }
-
+    
+    //Mostrar
     public void mostrarDatos() {
         System.out.println("Nombre: " + nombre);
         System.out.println("Edad: " + edad + " anios");
@@ -59,6 +63,7 @@ public abstract class Animal {
         System.out.println("Nombre cientifico: " + nombreCientifico());
     }
     
+    //Métodos abstractos
     public abstract String sonido();
     public abstract String alimentacion();
     public abstract String habitat();

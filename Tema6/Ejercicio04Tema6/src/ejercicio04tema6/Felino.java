@@ -9,7 +9,7 @@ package ejercicio04tema6;
  * @author DAVID
  */
 public abstract class Felino extends Animal {
-    
+    //Constructores
     public Felino(){
         super();
     }
