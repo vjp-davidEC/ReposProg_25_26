@@ -9,8 +9,10 @@ package ejercicio01tema6;
  * @author alumno
  */
 public class Potencia extends Calculadora{
+    //Atributo
     private int exponente;
     
+    //Constructores
     public Potencia(){
         super();
         exponente = 0;
@@ -20,7 +22,8 @@ public class Potencia extends Calculadora{
         super(numero);
         this.exponente = exponente;
     }
-
+    
+    //Getter/Setter
     public int getExponente() {
         return exponente;
     }
@@ -28,12 +31,14 @@ public class Potencia extends Calculadora{
     public void setExponente(int exponente) {
         this.exponente = exponente;
     }
-
+    
+    //Mostrar
     @Override
     public String toString() {
         return "Potencia{" + "exponente=" + exponente + '}';
     }
     
+    //Implementación del método abstracto realizarOperacion()
     @Override
     public void realizarOperacion(){
         System.out.println("La potencia de " + getNumero() + " ^ " + exponente + " = " + Math.pow(getNumero(), exponente));

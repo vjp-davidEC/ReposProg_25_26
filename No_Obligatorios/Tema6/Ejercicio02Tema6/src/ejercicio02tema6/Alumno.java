@@ -9,8 +9,10 @@ package ejercicio02tema6;
  * @author DAVID
  */
 public class Alumno extends Persona{
-        private String grupo;
+    //Atributo
+    private String grupo;
     
+    //Constructores
     public Alumno() {
         super();
         grupo = "";
@@ -20,7 +22,8 @@ public class Alumno extends Persona{
         super(nombre);
         this.grupo = grupo;
     }
-
+    
+    //Getter/Setter
     public String getGrupo() {
         return grupo;
     }
@@ -28,12 +31,14 @@ public class Alumno extends Persona{
     public void setGrupo(String grupo){
         this.grupo = grupo;
     }
-
+    
+    //Mostrar
     @Override
     public String toString() {
         return "Alumno{" + "grupo=" + grupo + '}';
     }
     
+    //Implementación del método abstracto saludar()
     @Override
     public String saludar(){
         return "Hola, soy el alumno " + getNombre() + " y estoy en el grupo de " + grupo;

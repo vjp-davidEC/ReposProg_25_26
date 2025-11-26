@@ -9,8 +9,10 @@ package ejercicio01tema6;
  * @author alumno
  */
 public class Suma extends Calculadora{
+    //Atributo
     private double sumando;
     
+    //Constructores
     public Suma(){
         super();
         sumando = 0;
@@ -20,7 +22,8 @@ public class Suma extends Calculadora{
         super(numero);
         this.sumando = sumando;
     }
-
+    
+    //Getter/Setter
     public double getSumando() {
         return sumando;
     }
@@ -28,12 +31,14 @@ public class Suma extends Calculadora{
     public void setSumando(double sumando) {
         this.sumando = sumando;
     }
-
+    
+    //Mostrar
     @Override
     public String toString() {
         return "Suma{" + "sumando=" + sumando + '}';
     }
     
+    //Implementación del método abstracto realizarOperacion()
     @Override
     public void realizarOperacion(){
         System.out.println("La suma de " + getNumero() + " + " + sumando + " = " + (getNumero() + sumando));

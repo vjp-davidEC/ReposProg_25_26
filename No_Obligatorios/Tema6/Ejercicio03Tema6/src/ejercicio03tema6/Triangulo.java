@@ -9,9 +9,11 @@ package ejercicio03tema6;
  * @author DAVID
  */
 public abstract class Triangulo extends FiguraGeometrica{
+    //Atributos
     private double base;
     private double altura;
     
+    //Contructores
     public Triangulo(){
         super();
         base = 0;
@@ -23,7 +25,8 @@ public abstract class Triangulo extends FiguraGeometrica{
         this.base = base;
         this.altura = altura;
     }
-
+    
+    //Getters/Setters
     public double getBase() {
         return base;
     }
@@ -40,6 +43,7 @@ public abstract class Triangulo extends FiguraGeometrica{
         this.altura = altura;
     }
 
+    //Mostrar
     @Override
     public String toString() {
         return "Triangulo{" + "base=" + base + ", altura=" + altura + '}';

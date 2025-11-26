@@ -30,6 +30,7 @@ public abstract class Calculadora {
         this.numero = numero;
     }
     
+    //Método abstracto
     public abstract void realizarOperacion();
     
     //Mostrar

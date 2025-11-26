@@ -9,8 +9,10 @@ package ejercicio03tema6;
  * @author DAVID
  */
 public abstract class FiguraGeometrica {
+    //Atributo
     private String color;
     
+    //Constructores
     public FiguraGeometrica(){
         color = "";
     }
@@ -18,7 +20,8 @@ public abstract class FiguraGeometrica {
     public FiguraGeometrica(String color) {
         this.color = color;
     }
-
+    
+    //Getter/Setter
     public String getColor() {
         return color;
     }
@@ -26,12 +29,14 @@ public abstract class FiguraGeometrica {
     public void setColor(String color) {
         this.color = color;
     }
-
+    
+    //Mostrar
     @Override
     public String toString() {
         return "FiguraGeometrica{" + "color=" + color + '}';
     }
     
+    //Métodos abstractos
     public abstract double calcularArea();
     public abstract double calcularPerimetro();
 }

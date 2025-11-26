@@ -9,8 +9,10 @@ package ejercicio03tema6;
  * @author DAVID
  */
 public class Cuadrado extends FiguraGeometrica{
+    //Atributo
     private double lado;
     
+    //Contructores
     public Cuadrado(){
         super();
         lado = 0;
@@ -21,6 +23,7 @@ public class Cuadrado extends FiguraGeometrica{
         this.lado = lado;
     }
 
+    //Getter/Setter
     public double getLado() {
         return lado;
     }
@@ -29,16 +32,18 @@ public class Cuadrado extends FiguraGeometrica{
         this.lado = lado;
     }
 
+    //Mostrar
     @Override
     public String toString() {
         return "Cuadrado{" + "lado=" + lado + '}';
     }
     
+    //Implementación del método abstracto calcularArea()
     @Override
     public double calcularArea(){
         return lado * lado;
     }
-    
+    //Implementación del método abstracto calcularPerimetro()
     @Override
     public double calcularPerimetro(){
         return 4 * lado;
