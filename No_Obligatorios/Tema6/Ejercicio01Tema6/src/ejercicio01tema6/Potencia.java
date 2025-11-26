@@ -8,7 +8,7 @@ package ejercicio01tema6;
  *
  * @author alumno
  */
-public abstract class Potencia extends Calculadora{
+public class Potencia extends Calculadora{
     private int exponente;
     
     public Potencia(){
@@ -36,7 +36,6 @@ public abstract class Potencia extends Calculadora{
     
     @Override
     public void realizarOperacion(){
-        double resultado = Math.pow(getNumero(), exponente);
-        System.out.println("La potencia de " + getNumero() + " ^ " + exponente + " = " + resultado);
+        System.out.println("La potencia de " + getNumero() + " ^ " + exponente + " = " + Math.pow(getNumero(), exponente));
     }
 }

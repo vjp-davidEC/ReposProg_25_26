@@ -37,5 +37,4 @@ public abstract class Calculadora {
     public String toString() {
         return "Calculadora{" + "numero=" + numero + '}';
     }
-    
 }

@@ -14,19 +14,19 @@ public class Ejercicio01Tema6 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Suma suma = new Suma(10,5);
-        Multiplicador multiplicacion = new Multiplicador(4, 3);
-        Potencia potencia = new Potencia(2, 4);
+        Suma suma = new Suma(10.75,5.5);
+        Multiplicacion m1 = new Multiplicacion(4.75, 3.15);
+        Potencia potencia = new Potencia(2.2, 4);
         
         suma.realizarOperacion();
-        multiplicacion.realizarOperacion();
+        m1.realizarOperacion();
         potencia.realizarOperacion();
         
         System.out.println("");
         
-        Calculadora c1 = new Suma(7, 8);
-        Calculadora c2 = new Multiplicador(6, 2);
-        Calculadora c3 = new Potencia(3, 3);
+        Calculadora c1 = new Suma(7.99, 8.75);
+        Calculadora c2 = new Multiplicacion(6.90, 2.86);
+        Calculadora c3 = new Potencia(3.3, 3);
         
         c1.realizarOperacion();
         c2.realizarOperacion();

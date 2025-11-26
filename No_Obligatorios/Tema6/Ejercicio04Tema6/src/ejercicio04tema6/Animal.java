@@ -1,0 +1,66 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package ejercicio04tema6;
+
+/**
+ *
+ * @author DAVID
+ */
+public abstract class Animal {
+    private String nombre;
+    private int edad;
+    private double peso;
+    
+    public Animal() {
+        nombre = "";
+        edad = 0;
+        peso = 0;
+    }
+    
+    public Animal(String nombre, int edad, double peso) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.peso = peso;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public void mostrarDatos() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad + " anios");
+        System.out.println("Peso: " + peso + " kg");
+        System.out.println("Sonido: " + sonido());
+        System.out.println("Alimentacion: " + alimentacion());
+        System.out.println("Habitat: " + habitat());
+        System.out.println("Nombre cientifico: " + nombreCientifico());
+    }
+    
+    public abstract String sonido();
+    public abstract String alimentacion();
+    public abstract String habitat();
+    public abstract String nombreCientifico();
+}
