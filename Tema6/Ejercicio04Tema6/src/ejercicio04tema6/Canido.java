@@ -17,4 +17,10 @@ public abstract class Canido extends Animal {
     public Canido(String nombre, int edad, double peso) {
         super(nombre, edad, peso);
     }
+    
+    //Mostrar
+    public void mostrarCanido(){
+        System.out.println("Canido");
+        super.mostrarDatos();
+    }
 }

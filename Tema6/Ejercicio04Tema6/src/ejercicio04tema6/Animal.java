@@ -57,10 +57,6 @@ public abstract class Animal {
         System.out.println("Nombre: " + nombre);
         System.out.println("Edad: " + edad + " anios");
         System.out.println("Peso: " + peso + " kg");
-        System.out.println("Sonido: " + sonido());
-        System.out.println("Alimentacion: " + alimentacion());
-        System.out.println("Habitat: " + habitat());
-        System.out.println("Nombre cientifico: " + nombreCientifico());
     }
     
     //Métodos abstractos

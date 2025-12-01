@@ -38,4 +38,10 @@ public class Gato extends Felino {
     public String nombreCientifico() {
         return "Felis silvestris catus";
     }
+    
+    //Mostrar
+    public void mostrarGato(){
+        System.out.println("Gato");
+        super.mostrarFelino();
+    }
 }

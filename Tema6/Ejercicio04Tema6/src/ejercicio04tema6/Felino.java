@@ -17,4 +17,10 @@ public abstract class Felino extends Animal {
     public Felino(String nombre, int edad, double peso) {
         super(nombre, edad, peso);
     }
+    
+    //Mostrar
+    public void mostrarFelino(){
+        System.out.println("Felino");
+        super.mostrarDatos();
+    }
 }

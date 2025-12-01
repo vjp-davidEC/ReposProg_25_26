@@ -38,4 +38,10 @@ public class Leon extends Felino {
     public String nombreCientifico() {
         return "Panthera leo";
     }
+    
+    //Mostrar
+    public void mostrarLeon(){
+        System.out.println("Leon");
+        super.mostrarFelino();
+    }
 }

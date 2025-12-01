@@ -38,4 +38,10 @@ public class Perro extends Canido {
     public String nombreCientifico() {
         return "Canis lupus familiaris";
     }
+    
+    //Mostrar
+    public void mostrarPerro(){
+        System.out.println("Perro");
+        super.mostrarCanido();
+    }
 }

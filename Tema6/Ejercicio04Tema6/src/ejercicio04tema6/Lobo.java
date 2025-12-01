@@ -38,4 +38,10 @@ public class Lobo extends Canido {
     public String nombreCientifico() {
         return "Canis lupus";
     }
+    
+    //Mostrar
+    public void mostrarLobo(){
+        System.out.println("Lobo");
+        super.mostrarCanido();
+    }
 }
