@@ -9,7 +9,7 @@ package ejercicio05tema6;
  * @author alumno
  */
 public class Mamifero {
-    //Atributos
+   //Atributos
    private String nombre;
    private String sexo;
    private String color;

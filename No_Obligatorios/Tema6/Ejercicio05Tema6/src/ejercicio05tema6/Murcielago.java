@@ -9,6 +9,7 @@ package ejercicio05tema6;
  * @author alumno
  */
 public class Murcielago extends Mamifero implements Volador {
+    //Atributos
     private double alturaVuelo;
     
     //Constructores

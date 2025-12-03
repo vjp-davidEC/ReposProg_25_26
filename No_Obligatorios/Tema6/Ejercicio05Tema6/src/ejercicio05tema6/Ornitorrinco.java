@@ -9,8 +9,10 @@ package ejercicio05tema6;
  * @author alumno
  */
 public class Ornitorrinco extends Mamifero implements Oviparo {
+    //Atributo
     private int numHuevos;
     
+    //Constructores
     public Ornitorrinco(){
         super();
         numHuevos = 0;
