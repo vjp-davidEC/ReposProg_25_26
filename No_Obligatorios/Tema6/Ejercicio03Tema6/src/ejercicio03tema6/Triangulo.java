@@ -46,6 +46,12 @@ public abstract class Triangulo extends FiguraGeometrica{
     //Mostrar
     @Override
     public String toString() {
-        return "Triangulo{" + "base=" + base + ", altura=" + altura + '}';
+        return super.toString() + "Triangulo{" + "base=" + base + ", altura=" + altura + '}';
+    }
+    
+    //Implementación del método abstracto calcularArea()
+    @Override
+    public double calcularArea(){
+        return (getBase() * getAltura()) / 2;
     }
 }

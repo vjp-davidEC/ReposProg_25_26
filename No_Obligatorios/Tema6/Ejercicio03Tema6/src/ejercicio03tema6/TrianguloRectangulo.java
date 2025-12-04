@@ -18,11 +18,6 @@ public class TrianguloRectangulo extends Triangulo{
         super(color, base, altura);
     }
     
-    //Implementación del método abstracto calcularArea()
-    @Override
-    public double calcularArea(){
-        return (getBase() * getAltura()) / 2;
-    }
     //Implementación del método abstracto calcularPerimetro()
     @Override
     public double calcularPerimetro(){

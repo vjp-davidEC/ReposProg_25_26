@@ -82,8 +82,10 @@ public class Libro implements Transformable {
     @Override
     public String obtenerCadenaMasLarga() {
         String mayor = titulo;
-        if (autor.length() > mayor.length()) mayor = autor;
-        if (genero.length() > mayor.length()) mayor = genero;
+        if (autor.length() > mayor.length()) 
+            mayor = autor;
+        if (genero.length() > mayor.length()) 
+            mayor = genero;
         return mayor;
     }
 

@@ -80,8 +80,10 @@ public class Persona implements Transformable {
     @Override
     public String obtenerCadenaMasLarga() {
         String mayor = nombre;
-        if (apellidos.length() > mayor.length()) mayor = apellidos;
-        if (alias.length() > mayor.length()) mayor = alias;
+        if (apellidos.length() > mayor.length()) 
+            mayor = apellidos;
+        if (alias.length() > mayor.length()) 
+            mayor = alias;
         return mayor;
     }
 

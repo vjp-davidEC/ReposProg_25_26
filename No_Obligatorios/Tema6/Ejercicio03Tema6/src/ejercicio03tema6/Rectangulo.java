@@ -46,7 +46,7 @@ public class Rectangulo extends FiguraGeometrica{
     //Mostrar
     @Override
     public String toString() {
-        return "Rectangulo{" + "base=" + base + ", altura=" + altura + '}';
+        return super.toString() + "Rectangulo{" + "base=" + base + ", altura=" + altura + '}';
     }
     
     //Implementación del método abstracto calcularArea()

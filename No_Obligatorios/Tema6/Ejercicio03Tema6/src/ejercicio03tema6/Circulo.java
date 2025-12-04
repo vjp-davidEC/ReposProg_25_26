@@ -9,7 +9,7 @@ package ejercicio03tema6;
  * @author DAVID
  */
 public class Circulo extends FiguraGeometrica{
-    ////Atributo
+    //Atributo
     private double radio;
     
     //Contructores
@@ -35,7 +35,7 @@ public class Circulo extends FiguraGeometrica{
     //Mostrar
     @Override
     public String toString() {
-        return "Circulo{" + "radio=" + radio + '}';
+        return super.toString() + "Circulo{" + "radio=" + radio + '}';
     }
     
     //Implementación del método abstracto calcularArea()

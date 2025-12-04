@@ -9,8 +9,8 @@ package ejercicio05tema6;
  * @author alumno
  */
 public interface Oviparo {
-    String obtenerMensajeOviparo();//Devuelve un mensaje indicando que el animal es ovíparo
-    void ponerHuevo();//Incrementa el número de huevos
-    void incubarHuevo();//Reduce el número de huevos
-    void mostrarNumHuevos();//Muestra el número actual de huevos
+    public String obtenerMensajeOviparo();//Devuelve un mensaje indicando que el animal es ovíparo
+    public void ponerHuevo();//Incrementa el número de huevos
+    public void incubarHuevo();//Reduce el número de huevos
+    public void mostrarNumHuevos();//Muestra el número actual de huevos
 }

@@ -35,7 +35,7 @@ public class Cuadrado extends FiguraGeometrica{
     //Mostrar
     @Override
     public String toString() {
-        return "Cuadrado{" + "lado=" + lado + '}';
+        return super.toString() + "Cuadrado{" + "lado=" + lado + '}';
     }
     
     //Implementación del método abstracto calcularArea()
