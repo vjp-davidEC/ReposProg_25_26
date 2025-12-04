@@ -9,9 +9,9 @@ package ejercicio07tema6;
  * @author DAVID
  */
 public interface ControlRemoto {
-    void encender();//Método para encender el dispositivo
-    void apagar();//Método para apagar el dispositivo
-    void subirVolumen();//Método para subir el volumen
-    void bajarVolumen();//Método para bajar el volumen
-    void cambiarCanal(float canal);//Método para cambiar el canal, recibe un número decimal como parámetro
+    public void encender();//Método para encender el dispositivo
+    public void apagar();//Método para apagar el dispositivo
+    public void subirVolumen();//Método para subir el volumen
+    public void bajarVolumen();//Método para bajar el volumen
+    public void cambiarCanal(float canal);//Método para cambiar el canal, recibe un número decimal como parámetro
 }
