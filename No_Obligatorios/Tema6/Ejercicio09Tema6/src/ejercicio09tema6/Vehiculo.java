@@ -64,14 +64,19 @@ public class Vehiculo implements Gravable {
     //Método de la interfaz Gravable
     @Override
     public double calcularImpuesto() {
+        //Menos de 1.000 cc. Tarifa mínima de alrededor de 12 euros
         if (cc < 1000) {
             return 12;
+        //1.001 – 1.499 cc. Tarifa de 34 euros
         } else if (cc <= 1499) {
             return 34;
+        //1.500 – 1.999 cc. Tarifa de 71 euros
         } else if (cc <= 1999) {
             return 71;
+        //2.000 – 2.999 cc. Tarifa de 122 euros
         } else if (cc <= 2999) {
             return 122;
+        //Más de 3.000 cc. Tarifa de 152 euros
         } else {
             return 152;
         }
