@@ -16,7 +16,6 @@ public class Libro implements Transformable {
     
     //Constructores
     public Libro(){
-        super();
         titulo = "";
         autor = "";
         genero = "";
@@ -97,8 +96,10 @@ public class Libro implements Transformable {
     //Método para contar vocales en la cadena
     public int contarVocalesCadena(String cadena) {
         int contador = 0;
-        for (int i = 0; i < cadena.length(); i++) {//Recorre cada carácter de la cadena
-            char c = Character.toLowerCase(cadena.charAt(i));//Convierte a minúscula
+        String cadenaAux = cadena.toLowerCase();//Para convertir a minuscula
+        for (int i = 0; i < cadenaAux.length(); i++) {//Recorre cada carácter de la cadena
+            //char c = Character.toLowerCase(cadena.charAt(i));
+            char c = cadenaAux.charAt(i);//Llama a cadenaAux para decir que sean en minuscula
             if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {//Si el carácter es una vocal, incrementa el contador
                 contador++;
             }
