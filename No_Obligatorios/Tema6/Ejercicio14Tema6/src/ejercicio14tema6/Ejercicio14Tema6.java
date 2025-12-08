@@ -16,6 +16,7 @@ public class Ejercicio14Tema6 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Scanner
         Scanner entrada = new Scanner(System.in);
 
         //Se piden los datos de la revista al usuario
