@@ -15,30 +15,33 @@ public class Ejercicio01Tema7 {
     /**
      * @param args the command line arguments
      */
-    public static int pedirNumero(int[] numeros) {
+    
+    //Método para rellenar el array con 10 números enteros introducidos por el usuario
+    public static void pedirNumero(int[] numero) {
         Scanner entrada = new Scanner(System.in);
         
-        numeros = new int[10];
-        System.out.print("Introduce 10 numeros enteros: ");
-        
-        for(int i = 0; i < numeros.length; i++){
-            System.out.println("Los numeros son: " + i + ": ");
-            numeros[i] = entrada.nextInt();
+        int i;
+        for(i = 0; i < numero.length; i++){
+            System.out.print("Introduce 10 valores enteros: ");
+            numero[i] = entrada.nextInt();
         }
-        
-        return;
     }
     
+    //Método para mostrar solo los números pares del array
     public static void mostrarNumerosPares(int[] pares){
-        System.out.println("\nLos numeros pares: ");
+        System.out.println("\n--NUMEROS PARES--");
         
-        for(int i = 0; i < pares.length; i++){
-            if(i % 2 == 0);
-            System.out.println(pares[i]);
+        int i;
+        for(i = 0; i < pares.length; i++){
+            if(pares[i] % 2 == 0){
+                System.out.print(pares[i] + "\n");
+            }
         }
     }
+    
     public static void main(String[] args) {
-        int[] numeros = pedirNumero();
-        mostrarNumerosPares(numeros);
+        int[] vector = new int[10];//Array unidimensional de tamaño 10
+        pedirNumero(vector);//Pedimos los 10 números al usuario
+        mostrarNumerosPares(vector);//Mostramos solo los números pares
     }
 }
