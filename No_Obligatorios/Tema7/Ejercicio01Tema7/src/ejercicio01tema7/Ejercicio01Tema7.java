@@ -20,9 +20,11 @@ public class Ejercicio01Tema7 {
     public static void pedirNumero(int[] numero) {
         Scanner entrada = new Scanner(System.in);
         
+        System.out.print("--Introduce 10 valores enteros--\n");
+        
         int i;
         for(i = 0; i < numero.length; i++){
-            System.out.print("Introduce 10 valores enteros: ");
+            System.out.print("Introduce " + (i+1) + " valores enteros: ");
             numero[i] = entrada.nextInt();
         }
     }

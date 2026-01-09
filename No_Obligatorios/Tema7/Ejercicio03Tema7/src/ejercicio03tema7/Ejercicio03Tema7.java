@@ -4,6 +4,7 @@
  */
 package ejercicio03tema7;
 
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -26,9 +27,10 @@ public class Ejercicio03Tema7 {
             System.out.print("Por favor, introduzca la longitud del vector entre 1 y 10: ");
             try{
                 longitud = entrada.nextInt();
-            }catch(Exception e){
+            }catch(InputMismatchException e){
                 System.out.println(e);
                 System.out.println("Error: Debes introducir un numero entero");
+                entrada.next();
             }
             if(longitud < 1 || longitud > 10){
                 System.out.println("La longitud debe estar entre 1 y 10");
