@@ -13,8 +13,50 @@ public class Ejercicio10Tema7 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    
+    //// Método que rellena el vector con números aleatorios entre 1 y 8
+    public static void rellenarVector(int [] vector){
+        for(int i = 0; i < vector.length; i++){
+            vector[i] = (int)(Math.random() * 8) + 1;
+        }
     }
     
+    //Método que muestra el vector junto con un mensaje previo
+    public static void mostrarVector(int [] vector, String mensaje){
+        System.out.print(mensaje);
+        //Recorremos el vector imprimiendo cada número separado por un espacio
+        for(int i = 0; i < vector.length; i++){
+            System.out.print(vector[i] + " ");
+        }
+        System.out.println();
+    }
+    
+    //Método que sustituye por 0 todos los valores que estén repetidos
+    public static void sustituirRepetidos(int [] vector){
+        int[] conteo = new int[9];//array para contar cuántas veces aparece cada número (1..8)
+        
+        //Primera pasada: contamos cuántas veces aparece cada valor
+        for(int i = 0; i < vector.length; i++){
+            int valor = vector[i];
+            conteo[valor]++;
+        }
+        
+        //Segunda pasada: si un número aparece más de una vez, lo convertimos en 0
+        for(int i = 0; i < vector.length; i++){
+            int valor = vector[i];
+            if(conteo[valor] > 1){
+                vector[i] = 0;
+            }
+        }
+    }
+    
+    public static void main(String[] args) {
+        int[] vector = new int[10];//Creamos un vector de 10 posiciones
+        
+        rellenarVector(vector);//Lo rellenamos con números aleatorios
+        mostrarVector(vector, "Se han generado los siguientes numeros: ");
+        
+        sustituirRepetidos(vector);//Eliminamos los repetidos
+        mostrarVector(vector, "Sustituimos los elementos repetidos por un 0: ");
+    }
 }
