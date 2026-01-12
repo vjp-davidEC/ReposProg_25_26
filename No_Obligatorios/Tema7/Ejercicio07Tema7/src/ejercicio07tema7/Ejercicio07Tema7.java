@@ -35,9 +35,21 @@ public class Ejercicio07Tema7 {
     //Método que muestra los 10 números mayores del vector
     public static void mostrarDiezMayores(int [] vector){       
         System.out.println("\nLos 10 numeros mayores son:");
-        //Los 10 mayores están en las últimas 10 posiciones tras ordenar
-        for(int i = vector.length - 10; i < vector.length; i++){
-            System.out.println(vector[i]);
+        //Repetimos 10 veces hasta encontrar los mayores
+        for(int rep = 0; rep < 10; rep++){
+            int max = -1;//Se pone porque que el más pequeño que cualquier número del vector
+            int indice = 0;//Se guarda la posición del mayor
+            //Buscamos el mayor del vector
+            for(int i = 0; i < vector.length; i++){
+                if(vector[i] > max){
+                    max = vector[i];
+                    indice = i;
+                }
+            }
+            //Mostramos el mayor encontrado
+            System.out.print(max + " ");
+            //Marcamos ese valor como usado para no volver a cogerlo
+            vector[indice] = -1;
         }
     }
     
