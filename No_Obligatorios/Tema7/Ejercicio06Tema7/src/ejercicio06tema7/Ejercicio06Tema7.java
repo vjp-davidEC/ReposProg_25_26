@@ -18,17 +18,23 @@ public class Ejercicio06Tema7 {
     public static boolean esPrimo(int numero){
         //Los números menores que 2 no son primos
         if(numero < 2) return false;
-        //Comprobamos si tiene algún divisor entre 2 y su raíz cuadrada
-        for(int i = 2; i <= Math.sqrt(numero); i++){
-            if(numero % i == 0) return false;//Si tiene divisor, no es primo
+        boolean esPrimo = true; //Suponemos que es primo 
+        int i = 2;
+        
+        //Mientras siga siendo primo y no hayamos llegado a la raíz cuadrada
+        while(esPrimo && i <= Math.sqrt(numero)){
+            if(numero % i == 0){
+                esPrimo = false; 
+            }
+            i++;//Pasamos al siguiente divisor
         }
-        return true;//Si no tiene divisores, es primo
+        return esPrimo;//Si no tiene divisores, es primo
     }
     
     //Método que rellena el vector con los primeros números primos
     public static void rellenarPrimos(int [] vector){
         int contador = 0;
-        int numero = 1;
+        int numero = 2;
         
         //Mientras no hayamos llenado el vector
         while(contador < vector.length){
