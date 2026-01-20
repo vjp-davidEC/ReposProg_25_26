@@ -23,7 +23,7 @@ public class Ejercicio14Tema7 {
         double[][] temperaturas = new double[SEM][DIA];
         
         String[] diasSemanas = {"Lunes", "Martes", "Miercoles",
-            "Jueves", "Sabado", "Domingo"};
+            "Jueves", "Viernes", "Sabado", "Domingo"};
         int opcion;
         
         do{
@@ -44,29 +44,33 @@ public class Ejercicio14Tema7 {
     
     //
     public static void mostrarMenu(){
-        System.out.println("--MENU--");
+        System.out.println("\n--MENU--");
         System.out.println("1. Rellenar las temperaturas");
         System.out.println("2. Mostrar las temperaturas");
         System.out.println("3. Visualizar la temperatura media del mes");
-        System.out.println("4. Día o días más calurosos del mes");
+        System.out.println("4. Dia o dias mas calurosos del mes");
         System.out.println("5. Salir del menu");
         System.out.print("Elige una opcion: ");
     }
     
     //
     public static void rellenarTemperaturas(double[][] matriz){
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("");
         for(int i = 0; i < SEM; i++){
             for(int j = 0; j < DIA; j++){
-                matriz[i][j] = (int)(Math.random() * 46);
+                System.out.print("Por favor, introduzca la temperatura en la posicion [" + i + j + "]: ");
+                matriz[i][j] = entrada.nextDouble();
             }
         }
     }
     
     //
     public static void mostrarTemperaturas(double[][] matriz){
+        System.out.println("");
         for(int i = 0; i < SEM; i++){
             for(int j = 0; j < DIA; j++){
-                System.out.println(matriz[i][j]);
+                System.out.println("La temperatura son: " + matriz[i][j]);
             }
             System.out.println("");
         }
@@ -74,19 +78,34 @@ public class Ejercicio14Tema7 {
     
     //
     public static void temperaturaMediaDelMes(double[][] matriz){
+        System.out.println("");
+        double suma = 0;
         for(int i = 0; i < SEM; i++){
             for(int j = 0; j < DIA; j++){
-                matriz[i][j] /= 7;
+                suma += matriz[i][j];
             }
         }
-        System.out.println("La temperatura media del mes es: ");
+        double media = suma / 28;
+        System.out.println("La temperatura media del mes es: " + media);
     }
     
     //
     public static void diaMasCalurosoDelMes(double[][] matriz, String[] diasSemenas){
+        System.out.println("");
+        double mayor = matriz[0][0];
         for(int i = 0; i < SEM; i++){
             for(int j = 0; j < DIA; j++){
-                
+                if(matriz[i][j] > mayor){
+                    mayor = matriz[i][j];
+                }
+            }
+        }
+        
+        for (int i = 0; i < SEM; i++) {
+            for (int j = 0; j < DIA; j++) {
+                if(matriz[i][j] == mayor){
+                    System.out.println("El " + diasSemenas[j] + " de la Semana " + (i + 1) + " con " + mayor + " grados");
+                }
             }
         }
     }
