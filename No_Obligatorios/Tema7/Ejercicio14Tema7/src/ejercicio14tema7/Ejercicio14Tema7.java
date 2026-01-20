@@ -15,13 +15,15 @@ public class Ejercicio14Tema7 {
     /**
      * @param args the command line arguments
      */
+    //Constantes que sirve para ponerlas en vez de poner "matriz.length"
     public final static int SEM = 4;
     public final static int DIA = 7;
     
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        double[][] temperaturas = new double[SEM][DIA];
+        double[][] temperaturas = new double[SEM][DIA];//Matriz donde guardaremos las temperaturas
         
+        //Array con los nombres de los días de la semana
         String[] diasSemanas = {"Lunes", "Martes", "Miercoles",
             "Jueves", "Viernes", "Sabado", "Domingo"};
         int opcion;
@@ -30,7 +32,7 @@ public class Ejercicio14Tema7 {
             mostrarMenu();
             opcion = entrada.nextInt();
             
-            switch(opcion){
+            switch(opcion){//Selección de la acción según la opción elegida
                 case 1 -> rellenarTemperaturas(temperaturas);
                 case 2 -> mostrarTemperaturas(temperaturas);
                 case 3 -> temperaturaMediaDelMes(temperaturas);
@@ -39,10 +41,10 @@ public class Ejercicio14Tema7 {
                 default -> System.out.println("Opcion no valida. Intentalo de nuevo");
             }
         }
-        while(opcion !=5);
+        while(opcion !=5);//Repetir hasta que el usuario elija salir
     }
     
-    //
+    //Metodo que muestra el menu por pantalla
     public static void mostrarMenu(){
         System.out.println("\n--MENU--");
         System.out.println("1. Rellenar las temperaturas");
@@ -53,7 +55,7 @@ public class Ejercicio14Tema7 {
         System.out.print("Elige una opcion: ");
     }
     
-    //
+    //Metodo que permite al usuario introducir las temperaturas en la matriz
     public static void rellenarTemperaturas(double[][] matriz){
         Scanner entrada = new Scanner(System.in);
         System.out.println("");
@@ -65,7 +67,7 @@ public class Ejercicio14Tema7 {
         }
     }
     
-    //
+    //Metodo que muestra todas las temperaturas almacenadas en la matriz
     public static void mostrarTemperaturas(double[][] matriz){
         System.out.println("");
         for(int i = 0; i < SEM; i++){
@@ -76,7 +78,7 @@ public class Ejercicio14Tema7 {
         }
     }
     
-    //
+    //Metodo que calcula y muestra la temperatura media del mes
     public static void temperaturaMediaDelMes(double[][] matriz){
         System.out.println("");
         double suma = 0;
@@ -89,10 +91,11 @@ public class Ejercicio14Tema7 {
         System.out.println("La temperatura media del mes es: " + media);
     }
     
-    //
+    //Metodo que busca el día o días con mayor temperatura del mes
     public static void diaMasCalurosoDelMes(double[][] matriz, String[] diasSemenas){
         System.out.println("");
         double mayor = matriz[0][0];
+        //Encontrar la temperatura máxima
         for(int i = 0; i < SEM; i++){
             for(int j = 0; j < DIA; j++){
                 if(matriz[i][j] > mayor){
@@ -101,6 +104,7 @@ public class Ejercicio14Tema7 {
             }
         }
         
+        //Mostrar todos los días que coincidan con la temperatura máxima
         for (int i = 0; i < SEM; i++) {
             for (int j = 0; j < DIA; j++) {
                 if(matriz[i][j] == mayor){

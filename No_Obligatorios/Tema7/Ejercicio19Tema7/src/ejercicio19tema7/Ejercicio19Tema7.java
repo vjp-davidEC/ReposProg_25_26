@@ -14,7 +14,7 @@ public class Ejercicio19Tema7 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int[] vector = new int[100];
+        int[] vector = new int[100];//Crear un vector de 100 posiciones
         
         rellenarVector(vector);
         mayorValor(vector);
@@ -23,14 +23,14 @@ public class Ejercicio19Tema7 {
         media(vector);
     }
     
-    //
+    //Metodo que rellena el vector con números aleatorios entre 10 y 80
     public static void rellenarVector(int [] vector){
         for(int i = 0; i < vector.length; i++){
             vector[i] = (int)(Math.random() * 71) + 10;
         }
     }
     
-    //
+    //Metodo que busca y muestra el mayor valor del vector
     public static void mayorValor(int [] vector){
         int mayor = vector[0];
         for(int i = 0; i < vector.length; i++){
@@ -41,7 +41,7 @@ public class Ejercicio19Tema7 {
         System.out.println("El mayor de todos es: " + mayor);
     }
     
-    //
+    //Metodo que busca y muestra el menor valor del vector
     public static void menorValor(int [] vector){
         int menor = vector[0];
         for(int i = 0; i < vector.length; i++){
@@ -52,7 +52,7 @@ public class Ejercicio19Tema7 {
         System.out.println("El menor de todos es: " + menor);
     }
     
-    //
+    //Metodo que determina que valor aparece más veces en el vector
     public static void masRepetidos(int [] vector){
         int rep = vector[0];
         int maxRep = 0;
@@ -66,6 +66,7 @@ public class Ejercicio19Tema7 {
                 }
             }
             
+            //Actualizar si encontramos un valor con más repeticiones
             if(contador > maxRep){
                 maxRep = contador;
                 rep = vector[i];
@@ -74,7 +75,7 @@ public class Ejercicio19Tema7 {
         System.out.println("Valor mas repetido: " + rep);
     }
     
-    //
+    //Metodo que calcula y muestra la media de todos los valores del vector
     public static void media(int [] vector){
         int suma = 0;
         for(int i = 0; i < vector.length; i++){
