@@ -17,35 +17,40 @@ public class Ejercicio01Tema8 {
      */
     public static void main(String[] args) {
         
+        //Array de 6 objetos de Asignatura
         Asignatura[] asig = new Asignatura[6];
         
-        asig[0] = new Asignatura("Programacion", pedirNota());
-        asig[1] = new Asignatura("Lenguaje de Marcas", pedirNota());
-        asig[2] = new Asignatura("Bases de Datos", pedirNota());
-        asig[3] = new Asignatura("Entornos de Desarrollo", pedirNota());
-        asig[4] = new Asignatura("Sistemas Informaticos", pedirNota());
-        asig[5] = new Asignatura("Formacion y Orientacion Laboral", pedirNota());
+        //Rellenar cada posicion del array en el que el nombre se lo ponemos y la nota la pedimos al usuario
+        asig[0] = new Asignatura("Programacion", pedirNota("Programacion"));
+        asig[1] = new Asignatura("Lenguaje de Marcas", pedirNota("Lenguaje de Marcas"));
+        asig[2] = new Asignatura("Bases de Datos", pedirNota("Bases de Datos"));
+        asig[3] = new Asignatura("Entornos de Desarrollo", pedirNota("Entornos de Desarrollo"));
+        asig[4] = new Asignatura("Sistemas Informaticos", pedirNota("Sistemas Informaticos"));
+        asig[5] = new Asignatura("Formacion y Orientacion Laboral", pedirNota("Formacion y Orientacion Laboral"));
         
+        double media = calcularMedia(asig);//Calcular media
         
-        System.out.print("Su nota media del curso es de: " + calcularMedia());
+        System.out.print("Su nota media del curso es de: " + media + "\n");//Mostrar nota media
     }
     
-    public static double pedirNota(){
+    //Metodo que pide la nota de cada asignatura la usuario
+    public static double pedirNota(String nombreAsig){
         Scanner entrada = new Scanner(System.in);
         double nota;
         
-        System.out.print("Introduce la nota: ");
+        System.out.print("Introduce la nota de " + nombreAsig + ": ");
         nota = entrada.nextDouble();
         
         return nota;
     }
     
+    //Metodo que calcula la nota media
     public static double calcularMedia(Asignatura[] vectorAsignaturas){
-        double media = 0;
-        for (int i = 0; i < vectorAsignaturas.length; i++) {
-            media = 
+        double suma = 0;
+        for(int i = 0; i < vectorAsignaturas.length; i++){
+            suma += vectorAsignaturas[i].getNota();
         }
         
-        return media;
+        return suma / vectorAsignaturas.length;
     }
 }
