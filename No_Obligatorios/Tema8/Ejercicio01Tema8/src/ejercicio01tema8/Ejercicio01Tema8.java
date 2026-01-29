@@ -48,7 +48,9 @@ public class Ejercicio01Tema8 {
     public static double calcularMedia(Asignatura[] vectorAsignaturas){
         double suma = 0;
         for(int i = 0; i < vectorAsignaturas.length; i++){
-            suma += vectorAsignaturas[i].getNota();
+            if(vectorAsignaturas[i] !=null){
+                suma += vectorAsignaturas[i].getNota();
+            }
         }
         
         return suma / vectorAsignaturas.length;
