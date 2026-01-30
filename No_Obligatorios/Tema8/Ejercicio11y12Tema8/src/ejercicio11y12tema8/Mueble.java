@@ -44,6 +44,6 @@ public class Mueble {
     //Mostrar
     @Override
     public String toString() {
-        return "Mueble{" + "precio=" + precio + ", descripcion=" + descripcion + '}';
+        return "Descripcion: " + descripcion + "\nPrecio: " + precio;
     }
 }
