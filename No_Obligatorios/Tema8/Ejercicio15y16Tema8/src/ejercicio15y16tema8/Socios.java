@@ -9,9 +9,11 @@ package ejercicio15y16tema8;
  * @author alumno
  */
 public class Socios {
+    //Atributos
     private String nombreSocio;
     private float precioAbonado;
     
+    //Constructores
     public Socios(){
         nombreSocio = "";
         precioAbonado = 0f;
@@ -22,6 +24,7 @@ public class Socios {
         this.precioAbonado = precioAbonado;
     }
 
+    //Getters/Setters
     public String getNombreSocio() {
         return nombreSocio;
     }
@@ -38,6 +41,7 @@ public class Socios {
         this.precioAbonado = precioAbonado;
     }
 
+    //Mostrar
     @Override
     public String toString() {
         return "NombreSocio: " + nombreSocio + "\nPrecioAbonado: " + precioAbonado;

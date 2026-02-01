@@ -9,10 +9,12 @@ package ejercicio13y14tema8;
  * @author alumno
  */
 public class Alumno {
+    //Atributos
     private String nombre;
     private int edad;
     private float notaMedia;
     
+    //Constructores
     public Alumno(){
         nombre = "";
         edad = 0;
@@ -25,6 +27,7 @@ public class Alumno {
         this.notaMedia = notaMedia;
     }
 
+    //Getters/Setters
     public String getNombre() {
         return nombre;
     }
@@ -49,6 +52,7 @@ public class Alumno {
         this.notaMedia = notaMedia;
     }
 
+    //Mostrar
     @Override
     public String toString() {
         return "Nombre: " + nombre + "\nEdad: " + edad + "\nNota media: " + notaMedia;

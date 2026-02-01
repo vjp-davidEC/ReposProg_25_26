@@ -9,10 +9,12 @@ package ejercicio15y16tema8;
  * @author alumno
  */
 public class Pelicula {
+    //Atributos
     private String titulo;
     private float costeLicencia;
     private Socios[] socios;
     
+    //Constructores
     public Pelicula(){
         titulo = "";
         costeLicencia = 0f;
@@ -24,7 +26,14 @@ public class Pelicula {
         this.costeLicencia = costeLicencia;
         this.socios = socios;
     }
+    
+    public Pelicula(String titulo, float costeLicencia) {
+        this.titulo = titulo;
+        this.costeLicencia = costeLicencia;
+        socios = new Socios[4];
+    }
 
+    //Getters/Setters
     public String getTitulo() {
         return titulo;
     }
@@ -49,6 +58,7 @@ public class Pelicula {
         this.socios = socios;
     }
 
+    //Mostrar
     @Override
     public String toString() {
         return "Titulo: " + titulo + "\nCosteLicencia: " + costeLicencia + "\nSocios: " + socios;
