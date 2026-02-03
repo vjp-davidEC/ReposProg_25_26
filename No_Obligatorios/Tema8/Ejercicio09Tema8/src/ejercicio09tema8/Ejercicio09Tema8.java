@@ -38,10 +38,10 @@ public class Ejercicio09Tema8 {
             opcion = entrada.nextInt();
             
             switch(opcion){//Selección de la acción según la opción elegida
-                case 1 -> rellenarNotas(alu, asignaturas);
-                case 2 -> mostrarNotas(alu);
-                case 3 -> alumnoMejor(alu);
-                case 4 -> alumnoSuspensos(alu);
+                case 1 -> rellenarAlumnos(alu, asignaturas);
+                case 2 -> mostrarAlumnos(alu);
+                case 3 -> mejorAlumno(alu);
+                case 4 -> peorAlumno(alu);
                 case 5 -> asignaturaDificil(alu, asignaturas);
                 case 6 -> System.out.println("Saliendo del programa...");
                 default -> System.out.println("Opcion no valida. Intentalo de nuevo");
@@ -62,52 +62,31 @@ public class Ejercicio09Tema8 {
     }
     
     //Metodo que permite introducir las notas de cada alumno en cada asignatura
-    public static void rellenarNotas(Alumno[] alu, String[] asignaturas){
+    public static void rellenarAlumnos(Alumno[] alu, String[] asignaturas) {
         System.out.println("");
-        Scanner entrada = new Scanner(System.in);
-        
-        for(int i = 0; i < alu.length; i++){
-            System.out.println("Introduce las notas para " + alu[i].getNombreAlumno());
-            //Array temporal para guardar las 4 asignaturas del alumno
-            Asignatura[] notas = new Asignatura[4];
-            
-            for(int j = 0; j < asignaturas.length; j++){
-                System.out.print("Nota de " + asignaturas[j] + ": ");
-                float nota = entrada.nextFloat();
-                //Se crea objeto Asignatura con nombre y nota
-                notas[j] = new Asignatura(asignaturas[j], nota);
-            }
-            //Se guarda las asignaturas dentro del alumno
-            alu[i].setNotas(notas);
+        for (int i = 0; i < alu.length; i++) {
+            System.out.println("Introduce notas para " + alu[i].getNombreAlumno());
+            alu[i].rellenarNotas(asignaturas); //El alumno se rellena solo 
         }
-        System.out.println("Notas introducidas correctamente");
     }
     
     //Metodo que muestra todas las notas de todos los alumnos
-    public static void mostrarNotas(Alumno[] alu){
+    public static void mostrarAlumnos(Alumno[] alu){
         System.out.println("");
-        for(Alumno alumno : alu){
-            System.out.println("Alumno: " + alumno.getNombreAlumno());
-            for(Asignatura asig : alumno.getNotas()){
-                System.out.println(" - " + asig.getNombreAsignatura() + ": " + asig.getNota());
-            }
+        for (int i = 0; i < alu.length; i++) {
+            alu[i].mostrarNotas();
         }
     }
     
     //Metodo que calcula que alumno tiene la mejor media
-    public static void alumnoMejor(Alumno[] alu){
+    public static void mejorAlumno(Alumno[] alu){
         System.out.println("");
         float mejorMedia = 0f;
         String mejorAlumno = "";
-        float suma;
         
-        for(int i = 0; i < alu.length; i++){
-            suma = 0f;
-            for(int j = 0; j < alu[i].getNotas().length; j++){
-                suma += alu[i].getNotas()[j].getNota();
-            }
-            float media = suma / 4;
-            if(media > mejorMedia){
+        for (int i = 0; i < alu.length; i++) {
+            float media = alu[i].calcularMedia();
+            if (media > mejorMedia) {
                 mejorMedia = media;
                 mejorAlumno = alu[i].getNombreAlumno();
             }
@@ -116,20 +95,15 @@ public class Ejercicio09Tema8 {
     }
     
     //Metodo que determina que alumno tiene más suspensos
-    public static void alumnoSuspensos(Alumno[] alu){
+    public static void peorAlumno(Alumno[] alu){
         System.out.println("");
         int maxSuspensos = 0;
         String alumnoPeor = "";
         int suspensos;
         
-        for(int i = 0; i < alu.length; i++){
-            suspensos = 0;
-            for(int j = 0; j < alu[i].getNotas().length; j++){
-                if(alu[i].getNotas()[j].getNota() < 5){
-                    suspensos++;
-                }
-            }
-            if(suspensos > maxSuspensos){
+        for (int i = 0; i < alu.length; i++) {
+            suspensos = alu[i].contarSuspensos();
+            if (suspensos > maxSuspensos) {
                 maxSuspensos = suspensos;
                 alumnoPeor = alu[i].getNombreAlumno();
             }
@@ -142,17 +116,17 @@ public class Ejercicio09Tema8 {
         System.out.println("");
         float peorMedia = 999f;//Lo pongo porque es el valor inicial mas alto
         String peor = "";
-        int suma;
+        float suma;
         
-        for(int j = 0; j < asignaturas.length; j++){
-            suma = 0;
-            for(int i = 0; i < alu.length; i++){
-                suma += alu[i].getNotas()[j].getNota();
+        for (int pos = 0; pos < asignaturas.length; pos++) {
+            suma = 0f;
+            for (int i = 0; i < alu.length; i++) {
+                suma += alu[i].getNotaPorPosicion(pos);
             }
-            float media = (float)suma / alu.length;
-            if(media < peorMedia){
+            float media = suma / alu.length;
+            if (media < peorMedia) {
                 peorMedia = media;
-                peor = asignaturas[j];
+                peor = asignaturas[pos];
             }
         }
         System.out.println("La asignatura mas dificil es: " + peor + " con media " + peorMedia);

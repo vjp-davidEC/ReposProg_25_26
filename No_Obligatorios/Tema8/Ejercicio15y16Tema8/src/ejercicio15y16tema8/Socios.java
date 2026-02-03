@@ -44,6 +44,6 @@ public class Socios {
     //Mostrar
     @Override
     public String toString() {
-        return "NombreSocio: " + nombreSocio + "\nPrecioAbonado: " + precioAbonado;
+        return " - " + "NombreSocio: " + nombreSocio + "\n - PrecioAbonado: " + precioAbonado;
     }
 }

@@ -155,13 +155,19 @@ public class Ejercicio13y14Tema8 {
         String nombre = entrada.nextLine();
         
         boolean encontrado = false;
+        int posicionActual = 0;
         
-        for(int i = 0; i < alu.length; i++){
-            if(alu[i] != null && alu[i].getNombre().equalsIgnoreCase(nombre)){
-                System.out.println("El alumno 'si' esta matriculado");
-                System.out.println(alu[i].toString());
+        while(posicionActual < alu.length && !encontrado){
+            //Se comprueba que la posición no sea null y que el nombre coincida
+            if(alu[posicionActual] != null && alu[posicionActual].getNombre().equalsIgnoreCase(nombre)){
                 encontrado = true;
+            }else{
+                posicionActual++;
             }
+        }
+        if(encontrado){
+            System.out.println("El alumno 'si' esta matriculado");
+            System.out.println(alu[posicionActual].toString());
         }
         if(!encontrado){
             System.out.println("El alumno 'no' esta matriculado");
