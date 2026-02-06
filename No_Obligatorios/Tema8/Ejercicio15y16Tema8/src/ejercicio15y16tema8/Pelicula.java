@@ -20,7 +20,7 @@ public class Pelicula {
     public Pelicula(){
         titulo = "";
         costeLicencia = 0f;
-        socios = new Socios[4];
+        socios = new Socios[1];
     }
 
     public Pelicula(String titulo, float costeLicencia, Socios[] socios) {
@@ -32,7 +32,7 @@ public class Pelicula {
     public Pelicula(String titulo, float costeLicencia) {
         this.titulo = titulo;
         this.costeLicencia = costeLicencia;
-        socios = new Socios[4];
+        socios = new Socios[1];
     }
 
     //Getters/Setters
@@ -121,32 +121,27 @@ public class Pelicula {
     public boolean empiezaPorTexto(String texto){
         String tituloMin = titulo.toLowerCase();
         String textoMin = texto.toLowerCase();
-        //Si el texto es más largo que el título, no puede empezar por él
+        boolean coincide = true;
+        
+        //Si el texto es más largo que el título
         if(textoMin.length() > tituloMin.length()){
-            return false;
-        }
-        //Se compara letra a letra
-        for(int i = 0; i < textoMin.length(); i++){
-            if(tituloMin.charAt(i) != textoMin.charAt(i)){
-                return false;//En cuanto una letra no coincide, ya no empieza por ese texto
+            coincide = false;
+        }else{
+            //Comparación letra a letra
+            for(int i = 0; i < textoMin.length() && coincide; i++){
+                if(tituloMin.charAt(i) != textoMin.charAt(i)){
+                    coincide = false;
+                }
             }
         }
-        return true;//Todas las letras coinciden
+        return coincide;
     }
-
     
     //Se cambia el 'a' por 'e' en el título
     public void cambiarAporE() {
-        String nuevo = "";
-        for (int i = 0; i < titulo.length(); i++) {
-            char c = titulo.charAt(i);
-            if (c == 'a') {
-                nuevo += 'e';
-            } else {
-                nuevo += c;
-            }
-        }
+        String nuevo = titulo.replace('a', 'e');
         titulo = nuevo;
+        System.out.println("Nuevo titulo: " + nuevo);
     }
     
     //Convierte el título a mayúsculas

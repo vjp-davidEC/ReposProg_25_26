@@ -19,7 +19,7 @@ public class Ejercicio15y16Tema8 {
         Scanner entrada = new Scanner(System.in);
         
         //Se crea un array de 5 peliculas
-        Pelicula[] peliculas = new Pelicula[5];
+        Pelicula[] peliculas = new Pelicula[1];
         
         int opcion;
         
@@ -207,7 +207,6 @@ public class Ejercicio15y16Tema8 {
         Pelicula ultima = peliculas[peliculas.length - 1];
         if (ultima != null) {
             ultima.cambiarAporE();
-            System.out.println("Nuevo titulo: " + ultima.getTitulo());
         }
     }
     
