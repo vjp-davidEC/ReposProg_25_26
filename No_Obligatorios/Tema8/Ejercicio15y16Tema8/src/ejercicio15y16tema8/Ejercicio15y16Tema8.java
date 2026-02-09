@@ -135,9 +135,11 @@ public class Ejercicio15y16Tema8 {
         String titulo = entrada.nextLine();
 
         boolean encontrado = false;
+        int i = 0;
 
         //Se busca la película por título
-        for (Pelicula p : peliculas) {
+        while(i < peliculas.length && !encontrado){
+            Pelicula p = peliculas[i];
             if (p != null && p.getTitulo().equalsIgnoreCase(titulo)) {
 
                 //Se usa los métodos de la clase Pelicula
@@ -149,6 +151,7 @@ public class Ejercicio15y16Tema8 {
 
                 encontrado = true;
             }
+            i++;
         }
 
         if (!encontrado) {
