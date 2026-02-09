@@ -19,7 +19,7 @@ public class Ejercicio15y16Tema8 {
         Scanner entrada = new Scanner(System.in);
         
         //Se crea un array de 5 peliculas
-        Pelicula[] peliculas = new Pelicula[1];
+        Pelicula[] peliculas = new Pelicula[5];
         
         int opcion;
         

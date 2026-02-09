@@ -20,7 +20,7 @@ public class Pelicula {
     public Pelicula(){
         titulo = "";
         costeLicencia = 0f;
-        socios = new Socios[1];
+        socios = new Socios[4];
     }
 
     public Pelicula(String titulo, float costeLicencia, Socios[] socios) {
@@ -32,7 +32,7 @@ public class Pelicula {
     public Pelicula(String titulo, float costeLicencia) {
         this.titulo = titulo;
         this.costeLicencia = costeLicencia;
-        socios = new Socios[1];
+        socios = new Socios[4];
     }
 
     //Getters/Setters
