@@ -37,6 +37,6 @@ public class Ejercicio07Tema9 {
         }
         //Se muestra el resultado final
         System.out.println("Frase invertida palabra a palabra:");
-        System.out.println(fraseInvertida);
+        System.out.println("- " + fraseInvertida);
     }
 }
