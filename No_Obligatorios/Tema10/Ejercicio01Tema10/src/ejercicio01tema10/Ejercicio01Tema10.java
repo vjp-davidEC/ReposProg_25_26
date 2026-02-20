@@ -17,12 +17,14 @@ public class Ejercicio01Tema10 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Se crea una lista donde se guardan los nombres introducidos por el usuario
         ArrayList <String> nombres = new ArrayList<>();
+        //Se rellena y se muestra los nombres
         rellenarLista(nombres);
         mostrarLista(nombres);
     }
     
-    //
+    //Metodo que rellena la lista con nombres introducidos por el usuario
     public static void rellenarLista(ArrayList<String> lista){
         Scanner entrada = new Scanner(System.in);
         String nombre;
@@ -30,13 +32,13 @@ public class Ejercicio01Tema10 {
         do {
             System.out.print("Introduce un nombre: ");
             nombre = entrada.nextLine();
-            lista.add(nombre);
+            lista.add(nombre);//Se añade a la lista
             System.out.print("Deseas introducir otro nombre - (SI o NO): ");
             repuesta = entrada.nextLine();
         }while (repuesta.equalsIgnoreCase("si"));
     }
     
-    //
+    //Metodo que muestra todos los nombres almacenados en la lista
     public static void mostrarLista(ArrayList<String> lista){
         System.out.println("--NOMBRE DE LAS LISTA--");
         for(int i = 0; i < lista.size(); i++){
