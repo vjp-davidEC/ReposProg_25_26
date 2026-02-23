@@ -37,6 +37,7 @@ public class Ejercicio04Tema10 {
         //Mientras sea positivo, se añade a la lista
         while(num >= 0){
             lista.add(num);//Se añade a la lista
+            System.out.print("    Numero: ");
             num = entrada.nextInt();
         }
     }
