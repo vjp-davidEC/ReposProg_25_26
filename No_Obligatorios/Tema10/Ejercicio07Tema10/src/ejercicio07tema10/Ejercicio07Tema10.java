@@ -16,16 +16,20 @@ public class Ejercicio07Tema10 {
     /**
      * @param args the command line arguments
      */
+    //Constante con el numero de semanas
     public static final int SEMANA = 4;
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
+        //Lista de lista donde se guarda las temperaturas del mes
         ArrayList<ArrayList<Integer>> temperaturas = new ArrayList<>();
 
+        //Array con los nombres de los dias de la semana
         String[] diaSemana = {"Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"};
 
         int opcion;
 
+        //Bucle principal del menu
         do {
             mostrarMenu();
             opcion = entrada.nextInt();
@@ -40,7 +44,7 @@ public class Ejercicio07Tema10 {
         } while (opcion != 5);
     }
 
-    //
+    //Metodo que muestra el menu de opciones
     public static void mostrarMenu() {
         System.out.println("\n--MENU--");
         System.out.println("1. Rellenar las temperaturas");
@@ -51,25 +55,25 @@ public class Ejercicio07Tema10 {
         System.out.print("Introduce una opcion: ");
     }
 
-    //
+    //Metodo que rellena la lista de temperaturas introducidas por el usuario
     public static void rellenarTemperaturas(ArrayList<ArrayList<Integer>> lista, String[] diaSemana) {
         Scanner entrada = new Scanner(System.in);
         System.out.println();
-        lista.clear();//Para limpiar por si tiene que empezar de nuevo
+        lista.clear();//Para limpiar por si tiene que empezar de nuevo o ya tenia datos
         System.out.println("Introduce las temperaturas");
         for (int i = 0; i < SEMANA; i++) {
-            lista.add(new ArrayList<>());
+            lista.add(new ArrayList<>());//Se añade una nueva semana
             System.out.println("-Semana " + (i + 1) + "-");
 
             for (int j = 0; j < diaSemana.length; j++) {
                 System.out.print("  " + diaSemana[j] + ": ");
                 int temp = entrada.nextInt();
-                lista.get(i).add(temp);
+                lista.get(i).add(temp);//Se guarda la temperatura en la semana correspondiente
             }
         }
     }
 
-    //
+    //Metodo que muestra las temperaturas del mes organizadas por semana
     public static void mostrarTemperaturas(ArrayList<ArrayList<Integer>> lista, String[] diaSemana) {
         System.out.println();
         if (lista.isEmpty()) {
@@ -86,7 +90,7 @@ public class Ejercicio07Tema10 {
         }
     }
 
-    //
+    //Metod que calcula la temperatura media del mes
     public static void temperaturaMedia(ArrayList<ArrayList<Integer>> lista, String[] diaSemana) {
         System.out.println();
         if (lista.isEmpty()) {
@@ -106,7 +110,7 @@ public class Ejercicio07Tema10 {
         }
     }
 
-    //
+    //Metodo que busca la temperatura maxima del mes
     public static void diaMasCaluroso(ArrayList<ArrayList<Integer>> lista, String[] diaSemana) {
         System.out.println();
         if (lista.isEmpty()) {

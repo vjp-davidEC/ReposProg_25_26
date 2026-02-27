@@ -9,10 +9,11 @@ package ejercicio09tema10;
  * @author alumno
  */
 public class Dia {
+    //Atributos
     private String nombreDia;
     private int temperatura;
     
-    //
+    //Constructores
     public Dia() {
         nombreDia = "";
         temperatura = 0;
@@ -23,7 +24,7 @@ public class Dia {
         this.temperatura = temperatura;
     }
 
-    //
+    //Getters/Setters
     public String getNombreDia() {
         return nombreDia;
     }
@@ -40,7 +41,7 @@ public class Dia {
         this.temperatura = temperatura;
     }
 
-    //
+    //Mostrar
     @Override
     public String toString() {
         return "El dia " + nombreDia + " hace una temperatura de " + temperatura + "C";
