@@ -21,15 +21,15 @@ public class Ejercicio02Tema10 {
         ArrayList<Integer> numeros = new ArrayList<>();
         //Se pide al usuario que introduzca numeros positivos
         rellenarLista(numeros);
-        //Si la lista no esta vacia, se muestra los resultados
-        if(!numeros.isEmpty()){
-            mostrarLista(numeros);
+        if(numeros.isEmpty()){
+            //Si esta vacia, se avisa al usuario
+            System.out.println("No se han introducido numeros");
+        }else{
+			//Si la lista no esta vacia, se muestra los resultados
+			mostrarLista(numeros);
             System.out.println("El mayor es: " + listaMayor(numeros));
             System.out.println("El menor es: " + listaMenor(numeros));
             System.out.println("La suma es: " + listaSuma(numeros));
-        }else{
-            //Si esta vacia, se avisa al usuario
-            System.out.println("No se han introducido numeros");
         }
     }
     

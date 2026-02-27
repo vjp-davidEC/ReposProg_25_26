@@ -78,11 +78,11 @@ public class Ejercicio06Tema10 {
         System.out.println();
         if(ventas.size() != 12){
             System.out.println("Aun no se han introducido las ventas");
-            return;
-        }
-        for(int i = 0; i < 12; i++){
+        } else {
+			for(int i = 0; i < 12; i++){
             System.out.println(meses[i] + ": " + ventas.get(i));
-        }
+			}
+		}
     }
     
     //Se muestra las ventas de los 12 meses en orden inverso
@@ -90,13 +90,13 @@ public class Ejercicio06Tema10 {
         System.out.println();
         if(ventas.size() != 12){
             System.out.println("Aun no se han introducido las ventas");
-            return;
-        }
-        //Se recorre la lista al reves calculando el indice inverso
-        for(int i = 0; i < ventas.size(); i++){
-            int indice = ventas.size() - 1 - i;
-            System.out.println(meses[indice] + ": " + ventas.get(indice));
-        }
+        } else {
+			//Se recorre la lista al reves calculando el indice inverso
+			for(int i = 0; i < ventas.size(); i++){
+				int indice = ventas.size() - 1 - i;
+				System.out.println(meses[indice] + ": " + ventas.get(indice));
+			}
+		}
     }
     
     //Metodo que calcula la suma total de las ventas
@@ -114,15 +114,15 @@ public class Ejercicio06Tema10 {
         System.out.println();
         if(ventas.size() != 12){
             System.out.println("Aun no se han introducido las ventas");
-            return;
-        }
-        int suma = 0;
-        for(int i = 0; i < 12; i++){
-            if(meses[i].toLowerCase().contains("a")){
-                suma += ventas.get(i);
-            }
-        }
-        System.out.println("Ventas totales de los meses con 'a' en su nombre: " + suma);
+        } else {
+			int suma = 0;
+			for(int i = 0; i < 12; i++){
+				if(meses[i].toLowerCase().contains("a")){
+					suma += ventas.get(i);
+				}
+			}
+			System.out.println("Ventas totales de los meses con 'a' en su nombre: " + suma);
+		}
     }
     
     //Metodo que muestra el mes o meses que han tenido mayor numero de ventas
@@ -130,19 +130,19 @@ public class Ejercicio06Tema10 {
         System.out.println();
         if(ventas.size() != 12){
             System.out.println("Aun no se han introducido las ventas");
-            return;
-        }
-        int max = ventas.get(0);
-        for(int i = 0; i < 12; i++){
-            if(ventas.get(i) > max){
-                max = ventas.get(i);
-            }
-        }
-        System.out.println("Mes o meses con mas ventas " + "-" + max + "-" + ":");
-        for(int i = 0; i < 12; i++){
-            if(ventas.get(i) == max){
-                System.out.println(meses[i]);
-            }
-        }
-    }
+        } else {
+			int max = ventas.get(0);
+			for(int i = 0; i < 12; i++){
+				if(ventas.get(i) > max){
+					max = ventas.get(i);
+				}
+			}
+			System.out.println("Mes o meses con mas ventas " + "-" + max + "-" + ":");
+			for(int i = 0; i < 12; i++){
+				if(ventas.get(i) == max){
+					System.out.println(meses[i]);
+				}
+			}
+		}
+	}
 }
