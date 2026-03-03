@@ -9,9 +9,11 @@ package ejercicio14tema10;
  * @author alumno
  */
 public class Asignatura {
+    //Atributos
     private String nombreAsignatura;
     private float nota;
     
+    //Constructores
     public Asignatura() {
         nombreAsignatura = "";
         nota = 0f;
@@ -22,6 +24,7 @@ public class Asignatura {
         this.nota = nota;
     }
 
+    //Getters/Setters
     public String getNombreAsignatura() {
         return nombreAsignatura;
     }
@@ -38,10 +41,9 @@ public class Asignatura {
         this.nota = nota;
     }
 
+    //Mostrar
     @Override
     public String toString() {
         return "La asignatura es " + nombreAsignatura + " y la nota es de " + nota;
-    }
-    
-    
+    }    
 }
