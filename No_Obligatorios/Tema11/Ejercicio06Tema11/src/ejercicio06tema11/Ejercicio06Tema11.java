@@ -17,6 +17,7 @@ public class Ejercicio06Tema11 {
      */
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
+        //Se crea una campaña que gestiona todas las donaciones
         Campania camp = new Campania();
 
         int opcion;
@@ -25,21 +26,21 @@ public class Ejercicio06Tema11 {
             mostrarMenu();
             opcion = entrada.nextInt();
             switch (opcion) {
-                case 1 -> camp.aniadirDonacion();
-                case 2 -> camp.mostrarDonaciones();
-                case 3 -> camp.buscarPorNombre();
-                case 4 -> System.out.print("Numero de donaciones: " + camp.numeroDonaciones() + "\n");
-                case 5 -> System.out.print("Total recaudado: " + camp.totalRecaudado() + " Euros" + "\n");
-                case 6 -> camp.ordenarDonaciones();
+                case 1 -> camp.aniadirDonacion();//Añadir donacion
+                case 2 -> camp.mostrarDonaciones();//Mostrar todas las donaciones
+                case 3 -> camp.buscarPorNombre();//Buscar por el nombre
+                case 4 -> System.out.print("\nNumero de donaciones: " + camp.numeroDonaciones() + "\n");//Total de donaciones
+                case 5 -> System.out.print("\nTotal recaudado: " + camp.totalRecaudado() + " Euros" + "\n");//Total recaudado
+                case 6 -> camp.ordenarDonaciones();//Ordenacion
                 case 7 -> System.out.println("Saliendo del programa...");
                 default -> System.out.println("Opcion no valida, intentelo de nuevo");
             }
         } while (opcion != 7);
     }
 
-    //
+    //Metodo que muestra por pantalla el menu
     public static void mostrarMenu() {
-        System.out.println("\n--MENU DONACIONES--");
+        System.out.println("\n--MENU--");
         System.out.println("1. Aniadir donacion");
         System.out.println("2. Mostrar donaciones");
         System.out.println("3. Buscar por nombre");

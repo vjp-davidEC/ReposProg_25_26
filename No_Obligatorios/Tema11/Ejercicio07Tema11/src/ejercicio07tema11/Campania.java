@@ -51,17 +51,15 @@ public class Campania {
     }
     
     //Metodos
-    //
+    //Metodo que añade una nueva donacion al conjunto de donaciones
     public void aniadirDonacion() {
-        System.out.println();
         String nombre = pedirNombre();
         float cantidad = pedirCantidad();
         donaciones.add(new Donacion(nombre, cantidad));
     }
     
-    //
+    //Metodo que muestra todas las donaciones registradas
     public void mostrarDonaciones() {
-        System.out.println();
         if(donaciones.isEmpty()) {
             System.out.println("No hay donaciones registradas");
         } else {
@@ -71,7 +69,7 @@ public class Campania {
         }
     }
     
-    //
+    //Metodo que muestra el total recaudado sumando todas las donaciones
     public float totalRecaudado() {
         float total = 0;
         for(Donacion dona : donaciones) {
@@ -80,11 +78,11 @@ public class Campania {
         return total;
     }
     
-    //
+    //Metodo que muestra la donacion con mayor cantidad aportada
     public Donacion mostrarMayorDonacion() {
-        System.out.println();
         Donacion mayor = null;
         for (Donacion dona : donaciones) {
+            //Si es la primera o supera a la mayor actual, se actualiza
             if (mayor == null || dona.getCantidad() > mayor.getCantidad()) {
                 mayor = dona;
             }
@@ -93,7 +91,7 @@ public class Campania {
     }
     
     
-    //
+    //Metodos que pide al usuario el nombre y la cantidad
     public String pedirNombre() {
         Scanner entrada = new Scanner(System.in);
         System.out.print("Nombre del donante: ");
@@ -106,13 +104,6 @@ public class Campania {
         System.out.print("Cantidad a donar: ");
         float cantidad = entrada.nextFloat();
         return cantidad;
-    }
-    
-    public String nombreABuscar() {
-        Scanner entrada = new Scanner(System.in);
-        System.out.print("Nombre a buscar: ");
-        String nombre = entrada.nextLine();
-        return nombre;
     }
     
     //Mostrar

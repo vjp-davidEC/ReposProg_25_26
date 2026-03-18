@@ -20,6 +20,7 @@ public class Ejercicio07Tema11 {
      */
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
+        //Conjunto donde se guarda todas las campañas
         Set<Campania> campania = new HashSet<>();
 
         int opcion;
@@ -40,8 +41,9 @@ public class Ejercicio07Tema11 {
         } while (opcion != 7);
     }
 
+    //Metodo que muestra por pantalla el menu
     public static void mostrarMenu() {
-        System.out.println("\n--MENU CAMPANIAS--");
+        System.out.println("\n--MENU--");
         System.out.println("1. Anadir campania");
         System.out.println("2. Anadir donacion");
         System.out.println("3. Mostrar campanias junto con donaciones");
@@ -52,15 +54,21 @@ public class Ejercicio07Tema11 {
         System.out.print("Elige opcion: ");
     }
 
+    //Metodo que añade una nueva campaña al conjunto
     public static void aniadirCampania(Set<Campania> campania) {
+        System.out.println();
         Scanner entrada = new Scanner(System.in);
+        
         System.out.print("Nombre de la campania: ");
         String nombreCampania = entrada.nextLine();
         campania.add(new Campania(nombreCampania));
     }
 
+    //Metodo que añade una donacion a una campaña concreta
     public static void aniadirDonacion(Set<Campania> campania) {
+        System.out.println();
         Scanner entrada = new Scanner(System.in);
+        
         if (campania.isEmpty()) {
             System.out.println("No hay campanias registradas");
         } else {
@@ -69,9 +77,9 @@ public class Ejercicio07Tema11 {
 
             boolean encontrado = false;
             Campania campaniaObjetivo = null;
-            Iterator<Campania> it = campania.iterator();
+            Iterator<Campania> it = campania.iterator();//Sirve para recorrer una coleccion elemento a elemento
 
-            while (it.hasNext() && !encontrado) {
+            while (it.hasNext() && !encontrado) {//Sirve para poder detener el recorrido cuando se quiera
                 Campania camp = it.next();
                 if (camp.getNombre().equalsIgnoreCase(nombreCampania)) {
                     encontrado = true;
@@ -86,19 +94,25 @@ public class Ejercicio07Tema11 {
         }
     }
 
+    //Metodo que muestra todas las campañas con sus donaciones
     public static void mostrarCampaniaConDonaciones(Set<Campania> campania) {
+        System.out.println();
+        
         if (campania.isEmpty()) {
             System.out.println("No hay campanias registradas");
         } else {
             for (Campania camp : campania) {
-                System.out.println(camp.getNombre());
+                System.out.println("--" + camp.getNombre() + "--");
                 camp.mostrarDonaciones();
             }
         }
     }
 
+    //Metodo que muestra una campaña concreta buscandola por su nombre
     public static void mostrarCampaniaPorNombre(Set<Campania> campania) {
+        System.out.println();
         Scanner entrada = new Scanner(System.in);
+        
         if (campania.isEmpty()) {
             System.out.println("No hay campanias registradas");
         } else {
@@ -107,9 +121,9 @@ public class Ejercicio07Tema11 {
 
             boolean encontrado = false;
             Campania campaniaObjetivo = null;
-            Iterator<Campania> it = campania.iterator();
+            Iterator<Campania> it = campania.iterator();//Sirve para recorrer una coleccion elemento a elemento
 
-            while (it.hasNext() && !encontrado) {
+            while (it.hasNext() && !encontrado) {//Sirve para poder detener el recorrido cuando se quiera
                 Campania camp = it.next();
                 if (camp.getNombre().equalsIgnoreCase(nombre)) {
                     encontrado = true;
@@ -119,13 +133,15 @@ public class Ejercicio07Tema11 {
             if (!encontrado) {
                 System.out.println("No existe esa campania");
             } else {
-                System.out.println(campaniaObjetivo.getNombre());
                 campaniaObjetivo.mostrarDonaciones();
             }
         }
     }
 
+    //Metodo que muestra el total recaudado entre todas las campañas
     public static void mostrarTotalRecaudado(Set<Campania> campania) {
+        System.out.println();
+        
         float total = 0;
         for (Campania c : campania) {
             total += c.totalRecaudado();
@@ -133,7 +149,9 @@ public class Ejercicio07Tema11 {
         System.out.println("Total recaudado: " + total + " Euro");
     }
 
+    //Metodo que muestra la mayor donacion entre todas las campañas
     public static void mostrarMayorDonacion(Set<Campania> campania) {
+        System.out.println();
 
         Donacion mayor = null;
 
@@ -148,7 +166,7 @@ public class Ejercicio07Tema11 {
         if (mayor == null) {
             System.out.println("No hay donaciones registradas.");
         } else {
-            System.out.println("Mayor donacion:\n " + mayor);
+            System.out.println("Mayor donacion:\n" + mayor);
         }
     }
 }

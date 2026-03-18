@@ -47,7 +47,7 @@ public class Campania {
     }
     
     //Metodos
-    //
+    //Metodo que añade una nueva donacion al conjunto
     public void aniadirDonacion() {
         System.out.println();
         String nombre = pedirNombre();
@@ -55,7 +55,7 @@ public class Campania {
         donaciones.add(new Donacion(nombre, cantidad));
     }
     
-    //
+    //Metodo que muestra las donaciones registradas
     public void mostrarDonaciones() {
         System.out.println();
         if(donaciones.isEmpty()) {
@@ -67,15 +67,15 @@ public class Campania {
         }
     }
     
-    //
+    //Metodo que busca una donacion por el nombre del donante
     public void buscarPorNombre() {
         System.out.println();
         String nombreBuscado = nombreABuscar();
         
-        Iterator<Donacion> it = donaciones.iterator();
+        Iterator<Donacion> it = donaciones.iterator();//Sirve para recorrer una coleccion elemento a elemento
         boolean encontrado = false;
         
-        while(it.hasNext()) {
+        while(it.hasNext() && !encontrado) {//Sirve para poder detener el recorrido cuando se quiera
             Donacion dona = it.next();
             if(dona.getNombrePersona().equalsIgnoreCase(nombreBuscado)) {
                 System.out.println("La cantidad es de " + dona.getCantidad());
@@ -87,12 +87,12 @@ public class Campania {
         }
     }
     
-    //
+    //Metodo que devuelve el numero total de donaciones
     public int numeroDonaciones() {
         return donaciones.size();
     }
     
-    //
+    //Metodo que calcula el total recaudado sumando todas las donaciones
     public float totalRecaudado() {
         float total = 0;
         for(Donacion dona : donaciones) {
@@ -101,22 +101,26 @@ public class Campania {
         return total;
     }
     
-    //
+    //Metodo que ordena las donaciones de mayor a menor cantidad
     public void ordenarDonaciones() {
         System.out.println();
         if(donaciones.isEmpty()) {
             System.out.println("No hay donaciones registradas");
         } else {
+            //Convierto el conjunto en un array para poder ordenarlo
             Donacion[] vDonacion = donaciones.toArray(new Donacion[0]);
             
+            //Ordenación de mayor a menor
             for(int i = 1; i < vDonacion.length; i++) {
                 Donacion actual = vDonacion[i];
                 int j = i - 1;
                 
+                //Desplazar los elementos menores hacia la derecha
                 while(j >= 0 && vDonacion[j].getCantidad() < actual.getCantidad()) {
                     vDonacion[j + 1] = vDonacion[j];
                     j--;
                 }
+                //Insertar la donacion en su posicion correcta
                 vDonacion[j + 1] = actual;
             }
             System.out.print("--DONACIONES ORDENADAS--\n");
@@ -127,7 +131,7 @@ public class Campania {
     }
     
     
-    //
+    //Pedir al usuario el nombre, cantidad y el nombre a buscar
     public String pedirNombre() {
         Scanner entrada = new Scanner(System.in);
         System.out.print("Nombre del donante: ");
