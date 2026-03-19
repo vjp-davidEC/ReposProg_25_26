@@ -108,7 +108,10 @@ public class Campania {
             System.out.println("No hay donaciones registradas");
         } else {
             //Convierto el conjunto en un array para poder ordenarlo
-            Donacion[] vDonacion = donaciones.toArray(new Donacion[0]);
+            Donacion[] vDonacion = new Donacion[donaciones.size()];
+            
+            //Se llena el array con los elementos de la colección
+            donaciones.toArray(vDonacion);
             
             //Ordenación de mayor a menor
             for(int i = 1; i < vDonacion.length; i++) {
