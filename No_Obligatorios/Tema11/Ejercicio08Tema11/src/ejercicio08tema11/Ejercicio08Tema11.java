@@ -112,11 +112,8 @@ public class Ejercicio08Tema11 {
         String nombreSede = entrada.nextLine();
 
         boolean encontrado = false;
-        Iterator<Ciudad> it = ciudades.iterator();//Sirve para recorrer una coleccion elemento a elemento
 
-        while (it.hasNext()) {
-            Ciudad ciudad = it.next();
-            //Si la ciudad tiene una sede con ese nombre
+        for (Ciudad ciudad : ciudades) {
             if (ciudad.buscarSede(nombreSede)) {
                 //Se recorre las sedes de esa ciudad para obtener los ingresos
                 for (Sede sede : ciudad.getSedes()) {

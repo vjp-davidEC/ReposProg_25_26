@@ -72,16 +72,15 @@ public class Campania {
         System.out.println();
         String nombreBuscado = nombreABuscar();
         
-        Iterator<Donacion> it = donaciones.iterator();//Sirve para recorrer una coleccion elemento a elemento
         boolean encontrado = false;
         
-        while(it.hasNext() && !encontrado) {//Sirve para poder detener el recorrido cuando se quiera
-            Donacion dona = it.next();
+        for (Donacion dona : donaciones) {
             if(dona.getNombrePersona().equalsIgnoreCase(nombreBuscado)) {
                 System.out.println("La cantidad es de " + dona.getCantidad());
                 encontrado = true;
             }
         }
+        
         if(!encontrado) {
             System.out.println("No existe ninguna donacion con ese nombre");
         }

@@ -105,10 +105,8 @@ public class Ciudad {
     //Metodo que busca si existe una sede con ese nombre
     public boolean buscarSede(String nombreSede) {
         boolean encontrado = false;
-        Iterator<Sede> it = sedes.iterator();//Sirve para recorrer una coleccion elemento a elemento
 
-        while (it.hasNext() && !encontrado) {//Sirve para poder detener el recorrido cuando se quiera
-            Sede sede = it.next();
+        for (Sede sede : sedes) {
             if (sede.getNombreSede().equalsIgnoreCase(nombreSede)) {
                 encontrado = true;
             }
