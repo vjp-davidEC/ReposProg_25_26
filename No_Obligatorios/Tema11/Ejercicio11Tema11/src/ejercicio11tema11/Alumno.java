@@ -1,0 +1,60 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package ejercicio11tema11;
+
+/**
+ *
+ * @author alumno
+ */
+public class Alumno {
+    //Atributos
+    private String dni;
+    private int numeroExpediente;
+    private float notaMedia;
+    
+    //Constructores
+    public Alumno() {
+        dni = "";
+        numeroExpediente = 0;
+        notaMedia = 0f;
+    }
+
+    public Alumno(String dni, int numeroExpediente, float notaMedia) {
+        this.dni = dni;
+        this.numeroExpediente = numeroExpediente;
+        this.notaMedia = notaMedia;
+    }
+    
+    //Getters/Setters
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public int getNumeroExpediente() {
+        return numeroExpediente;
+    }
+
+    public void setNumeroExpediente(int numeroExpediente) {
+        this.numeroExpediente = numeroExpediente;
+    }
+
+    public float getNotaMedia() {
+        return notaMedia;
+    }
+
+    public void setNotaMedia(float notaMedia) {
+        this.notaMedia = notaMedia;
+    }
+    
+    //Mostrar
+    @Override
+    public String toString() {
+        return "DNI: " + dni + "\nNumero de expediente: " + numeroExpediente + "\nNota media: " + notaMedia;
+    }
+}
