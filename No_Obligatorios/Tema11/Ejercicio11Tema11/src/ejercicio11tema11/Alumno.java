@@ -8,12 +8,13 @@ package ejercicio11tema11;
  *
  * @author alumno
  */
-public class Alumno {
+public class Alumno implements Comparable<Alumno> {
+
     //Atributos
     private String dni;
     private int numeroExpediente;
     private float notaMedia;
-    
+
     //Constructores
     public Alumno() {
         dni = "";
@@ -26,7 +27,7 @@ public class Alumno {
         this.numeroExpediente = numeroExpediente;
         this.notaMedia = notaMedia;
     }
-    
+
     //Getters/Setters
     public String getDni() {
         return dni;
@@ -51,10 +52,22 @@ public class Alumno {
     public void setNotaMedia(float notaMedia) {
         this.notaMedia = notaMedia;
     }
-    
+
     //Mostrar
     @Override
     public String toString() {
         return "DNI: " + dni + "\nNumero de expediente: " + numeroExpediente + "\nNota media: " + notaMedia;
+    }
+
+    //CompareTo
+    @Override
+    public int compareTo(Alumno a) {
+        if (this.numeroExpediente < a.getNumeroExpediente()) {
+            return -1;
+        } else if (this.numeroExpediente > a.getNumeroExpediente()) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 }
