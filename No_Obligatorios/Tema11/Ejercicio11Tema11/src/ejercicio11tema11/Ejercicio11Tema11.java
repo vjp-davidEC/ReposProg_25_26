@@ -44,12 +44,12 @@ public class Ejercicio11Tema11 {
     //
     public static void mostrarMenu() {
         System.out.println("\n--MENU--");
-        System.out.println("1. Aniadir alumno");
-        System.out.println("2. Mostrar alumnos ordenados por expediente");
-        System.out.println("3. Buscar por numero de expediente");
-        System.out.println("4. Mostrar alumnos por nota");
-        System.out.println("5. Salir del programa");
-        System.out.print("Introduce una opcion: ");
+        System.out.println("1. ANIADIR ALUMNO");
+        System.out.println("2. MOSTRAR ALUMNOS ORDENADOS POR EXPEDIENTE");
+        System.out.println("3. BUSCAR POR NUMERO DE EXPEDIENTE");
+        System.out.println("4. MOSTRAR ALUMNOS POR NOTA");
+        System.out.println("5. SALIR DEL PROGRAMA");
+        System.out.print("INTRODUCE UNA OPCION: ");
     }
 
     //
