@@ -7,6 +7,7 @@ package ejercicio11tema11;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
@@ -24,7 +25,7 @@ public class Ejercicio11Tema11 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         //Conjunto de alumnos
-        Set<Alumno> alumnos = new HashSet<>();
+        Set<Alumno> alumnos = new TreeSet<>();
 
         int opcion;
 
@@ -32,12 +33,18 @@ public class Ejercicio11Tema11 {
             mostrarMenu();
             opcion = entrada.nextInt();
             switch (opcion) {
-                case 1 -> aniadirAlumnos(alumnos);
-                case 2 -> mostrarAlumnosPorExpediente(alumnos);
-                case 3 -> buscarPorExpediente(alumnos);
-                case 4 -> mostrarAlumnosPorNota(alumnos);
-                case 5 -> System.out.println("Saliendo del programa");
-                default -> System.out.println("Opcion no valida, intentelo de nuevo");
+                case 1 ->
+                    aniadirAlumnos(alumnos);
+                case 2 ->
+                    mostrarAlumnosPorExpediente(alumnos);
+                case 3 ->
+                    buscarPorExpediente(alumnos);
+                case 4 ->
+                    mostrarAlumnosPorNota(alumnos);
+                case 5 ->
+                    System.out.println("Saliendo del programa");
+                default ->
+                    System.out.println("Opcion no valida, intentelo de nuevo");
             }
         } while (opcion != 5);
     }
@@ -56,12 +63,12 @@ public class Ejercicio11Tema11 {
     //Metodo que añade un alumno al conjunto
     public static void aniadirAlumnos(Set<Alumno> alumnos) {
         System.out.println();
-        
+
         System.out.println("Aniadiendo alumno...");
         String dni = pedirDni();
         int expediente = pedirExpediente();
         float media = pedirMedia();
-        
+
         //Se añade el alumno al HashSet
         alumnos.add(new Alumno(dni, expediente, media));
     }
@@ -77,7 +84,7 @@ public class Ejercicio11Tema11 {
             List<Alumno> lAlumnos = new ArrayList<>(alumnos);
             //Se define con el compareTo() de la clase Alumno
             Collections.sort(lAlumnos);
-            
+
             System.out.println("--ALUMNOS ORDENADOS POR EXPEDIENTE--");
             for (Alumno alum : lAlumnos) {
                 System.out.println(alum.toString());
@@ -90,16 +97,23 @@ public class Ejercicio11Tema11 {
     public static void buscarPorExpediente(Set<Alumno> alumnos) {
         System.out.println();
         Scanner entrada = new Scanner(System.in);
-        
+
         System.out.print("Numero de expediente a buscar: ");
         int buscarExpediente = entrada.nextInt();
-        
+
         boolean encontrado = false;
-        
+
+        //Se crea un iterador para recorrer el Set
+        Iterator<Alumno> it = alumnos.iterator();
+
         //Se recorre el Set buscando coincidencias
-        for (Alumno alum: alumnos) {
+        while (it.hasNext() && !encontrado) {
+            Alumno alum = it.next();
+
             if (alum.getNumeroExpediente() == buscarExpediente) {
-                System.out.println("Alumno encontrado y es" + "\nDNI: " + alum.getDni() + "\nNota media: " + alum.getNotaMedia());
+                System.out.println("Alumno encontrado y es");
+                System.out.println("DNI: " + alum.getDni());
+                System.out.println("Nota media: " + alum.getNotaMedia());
                 encontrado = true;
             }
         }
@@ -117,7 +131,7 @@ public class Ejercicio11Tema11 {
         } else {
             //Se ordena automaticamente las notas de menor a mayor
             TreeSet<Float> ordenar = new TreeSet<>();
-            
+
             //Se guarda todas las notas en el TreeSet
             for (Alumno alumno : alumnos) {
                 ordenar.add(alumno.getNotaMedia());
@@ -135,8 +149,7 @@ public class Ejercicio11Tema11 {
             }
         }
     }
-    
-    
+
     //Metodos que pide informacion al usuario de lo que sea
     public static String pedirDni() {
         Scanner entrada = new Scanner(System.in);

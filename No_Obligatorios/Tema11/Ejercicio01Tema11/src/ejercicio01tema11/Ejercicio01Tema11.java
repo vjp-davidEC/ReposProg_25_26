@@ -84,9 +84,9 @@ public class Ejercicio01Tema11 {
             System.out.println("Aun no se han generado las temperaturas");
         } else {
             System.out.println("--TEMPERATURAS--");
-            for (int i = 0; i < mapa.size(); i++) {
-                Dia d = mapa.get(i);
-                System.out.println(d.getNombreDia() + " dia " + (i+1) + ": " + d.getTemperatura() + "C");
+            for (Integer key : mapa.keySet()) {
+                Dia d = mapa.get(key);
+                System.out.println(d.getNombreDia() + " dia " + (key+1) + ": " + d.getTemperatura() + "C");
             }
         }
     }
@@ -100,8 +100,8 @@ public class Ejercicio01Tema11 {
         } else {
             int suma = 0;
             
-            for (int i = 0; i < mapa.size(); i++) {
-                suma += mapa.get(i).getTemperatura();
+            for (Integer key : mapa.keySet()) {
+                suma += mapa.get(key).getTemperatura();
             }
             
             float media = (float) suma / mapa.size();
@@ -118,15 +118,15 @@ public class Ejercicio01Tema11 {
         } else {
             int max = mapa.get(0).getTemperatura();
             
-            for (int i = 0; i < mapa.size(); i++) {
-                if (mapa.get(i).getTemperatura() > max) {
-                    max = mapa.get(i).getTemperatura();
+            for (Integer key : mapa.keySet()) {
+                if (mapa.get(key).getTemperatura() > max) {
+                    max = mapa.get(key).getTemperatura();
                 }
             }
             System.out.println("El dia o dias mas calurosos fueron: " + max + "C");
-            for (int i = 0; i < mapa.size(); i++) {
-                if (mapa.get(i).getTemperatura() == max) {
-                    System.out.println(" - " + mapa.get(i).getNombreDia() + " dia " + (i+1));
+            for (Integer key : mapa.keySet()) {
+                if (mapa.get(key).getTemperatura() == max) {
+                    System.out.println(" - " + mapa.get(key).getNombreDia() + " dia " + (key+1));
                 }
             }
         }
