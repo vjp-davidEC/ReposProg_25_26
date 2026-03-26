@@ -9,7 +9,6 @@ package ejercicio11tema11;
  * @author alumno
  */
 public class Alumno implements Comparable<Alumno> {
-
     //Atributos
     private String dni;
     private int numeroExpediente;

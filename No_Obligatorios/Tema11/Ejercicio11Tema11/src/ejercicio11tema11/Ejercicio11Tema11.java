@@ -23,6 +23,7 @@ public class Ejercicio11Tema11 {
      */
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
+        //Conjunto de alumnos
         Set<Alumno> alumnos = new HashSet<>();
 
         int opcion;
@@ -41,7 +42,7 @@ public class Ejercicio11Tema11 {
         } while (opcion != 5);
     }
 
-    //
+    //Metodo que muestra el menu por pantalla
     public static void mostrarMenu() {
         System.out.println("\n--MENU--");
         System.out.println("1. ANIADIR ALUMNO");
@@ -52,7 +53,7 @@ public class Ejercicio11Tema11 {
         System.out.print("INTRODUCE UNA OPCION: ");
     }
 
-    //
+    //Metodo que añade un alumno al conjunto
     public static void aniadirAlumnos(Set<Alumno> alumnos) {
         System.out.println();
         
@@ -61,17 +62,20 @@ public class Ejercicio11Tema11 {
         int expediente = pedirExpediente();
         float media = pedirMedia();
         
+        //Se añade el alumno al HashSet
         alumnos.add(new Alumno(dni, expediente, media));
     }
 
-    //
+    //Metodo que muestra los alumnos ordenados por numero de expediente
     public static void mostrarAlumnosPorExpediente(Set<Alumno> alumnos) {
         System.out.println();
 
         if (alumnos.isEmpty()) {
             System.out.println("No hay alumnos registrados");
         } else {
+            //Se pasa el Set a una lista para poder ordenarlas
             List<Alumno> lAlumnos = new ArrayList<>(alumnos);
+            //Se define con el compareTo() de la clase Alumno
             Collections.sort(lAlumnos);
             
             System.out.println("--ALUMNOS ORDENADOS POR EXPEDIENTE--");
@@ -82,7 +86,7 @@ public class Ejercicio11Tema11 {
         }
     }
 
-    //
+    //Metodo que busca un alumno por su numero de expediente
     public static void buscarPorExpediente(Set<Alumno> alumnos) {
         System.out.println();
         Scanner entrada = new Scanner(System.in);
@@ -92,6 +96,7 @@ public class Ejercicio11Tema11 {
         
         boolean encontrado = false;
         
+        //Se recorre el Set buscando coincidencias
         for (Alumno alum: alumnos) {
             if (alum.getNumeroExpediente() == buscarExpediente) {
                 System.out.println("Alumno encontrado y es" + "\nDNI: " + alum.getDni() + "\nNota media: " + alum.getNotaMedia());
@@ -103,20 +108,24 @@ public class Ejercicio11Tema11 {
         }
     }
 
-    //
+    //Metodo que muestra los alumnos ordenados por su nota
     public static void mostrarAlumnosPorNota(Set<Alumno> alumnos) {
         System.out.println();
 
         if (alumnos.isEmpty()) {
             System.out.println("No hay alumnos registrados");
         } else {
+            //Se ordena automaticamente las notas de menor a mayor
             TreeSet<Float> ordenar = new TreeSet<>();
             
+            //Se guarda todas las notas en el TreeSet
             for (Alumno alumno : alumnos) {
                 ordenar.add(alumno.getNotaMedia());
             }
             System.out.println("--ALUMNOS ORDENADOS POR NOTA--");
+            //Se recorre las notas ordenadas
             for (Float nota : ordenar) {
+                //Se busca que alumno tiene esa nota
                 for (Alumno a : alumnos) {
                     if (a.getNotaMedia() == nota) {
                         System.out.println(a.toString());
@@ -128,7 +137,7 @@ public class Ejercicio11Tema11 {
     }
     
     
-    //
+    //Metodos que pide informacion al usuario de lo que sea
     public static String pedirDni() {
         Scanner entrada = new Scanner(System.in);
         System.out.print("DNI: ");

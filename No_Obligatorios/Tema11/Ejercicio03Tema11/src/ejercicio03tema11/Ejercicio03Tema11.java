@@ -17,7 +17,7 @@ public class Ejercicio03Tema11 {
      */
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        //
+        //Vector de 6 darsenas donde aparcar los autobuses
         Autobus[] darsenas = new Autobus[6];
         
         int opcion;
@@ -37,7 +37,7 @@ public class Ejercicio03Tema11 {
         } while (opcion != 6);
     }
     
-    //
+    //Metodo que muestra el menu por pantalla
     public static void mostrarMenu() {
         System.out.println("\n--MENU--");
         System.out.println("1. APARCAR AUTOBUS");
@@ -49,7 +49,7 @@ public class Ejercicio03Tema11 {
         System.out.print("INTRODUCE UNA OPCION: ");
     }
     
-    //
+    //Metodo que aparca un autobus en una posicion libre del vector
     public static void aparcarBus(Autobus[] darsenas) {
         System.out.println();
         Scanner entrada = new Scanner(System.in);
@@ -64,6 +64,7 @@ public class Ejercicio03Tema11 {
         System.out.print("Cuantos conductores quieres aniadir: ");
         int num = entrada.nextInt();
         
+        //Se añade los conductores al HashMap del autobus
         for (int i = 0; i < num; i++) {
             bus.addConductor(pedirDni(), pedirNombre());
         }
@@ -71,7 +72,7 @@ public class Ejercicio03Tema11 {
         System.out.println("Autobus aparcado correctamente");
     }
     
-    //
+    //Metodo que muestra las darsenas que estan libres
     public static void mostrarDarsenasLibres(Autobus[] darsenas) {
         System.out.println();
         
@@ -88,7 +89,7 @@ public class Ejercicio03Tema11 {
         }
     }
     
-    //
+    //Metodo que busca un autobus por su matricula
     public static void buscarAutobus(Autobus[] darsenas) {
         System.out.println();
         Scanner entrada = new Scanner(System.in);
@@ -113,7 +114,7 @@ public class Ejercicio03Tema11 {
         }
     }
     
-    //
+    //Metodo que busca un conductor por su DNI y muestra en que autobus trabaja
     public static void buscarConductor(Autobus[] darsenas) {
         System.out.println();
         Scanner entrada = new Scanner(System.in);
@@ -124,6 +125,7 @@ public class Ejercicio03Tema11 {
         boolean encontrado = false;
         int i = 0;
         
+        //Se recorre cada autobus buscando su DNI en su HashMap
         while (i < darsenas.length && !encontrado) {
             if (darsenas[i] != null && darsenas[i].getConductores().containsKey(DNI)) {
                 System.out.println("El conductor trabaja en el autobus con matricula: " + darsenas[i].getMatricula());
@@ -137,7 +139,7 @@ public class Ejercicio03Tema11 {
         }
     }
     
-    //
+    //Metodo que busca el autobus con mayor numero de conductores
     public static void busConMasConductores(Autobus[] darsenas) {
         System.out.println();
         
@@ -160,7 +162,7 @@ public class Ejercicio03Tema11 {
     }
     
     
-    //
+    //Metodo que piden la informacion al usuario de lo que sea
     public static String pedirMatricula() {
         Scanner entrada = new Scanner(System.in);
         System.out.print("Introduce la matricula del autobus: ");

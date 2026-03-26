@@ -19,12 +19,12 @@ public class Ejercicio02Tema11 {
      */
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        //
+        //Mapa donde se guardan los productos
         Map<String, Producto> mapaProductos = new HashMap<>();
         
         int opcion;
         
-        do {
+        do {//Bucle principal
             mostrarMenu();
             opcion = entrada.nextInt();
             switch (opcion) {
@@ -36,12 +36,12 @@ public class Ejercicio02Tema11 {
         } while (opcion != 3);
     }
     
-    //
+    //Submenu Administracion
     public static void menuAdministracion(Map<String, Producto> mapa) {
         Scanner entrada = new Scanner(System.in);
         int opcion;
         
-        do {
+        do {//Bucle secundario
             mostrarMenuAdministracion();
             opcion = entrada.nextInt();
             switch (opcion) {
@@ -54,12 +54,12 @@ public class Ejercicio02Tema11 {
         } while (opcion != 4);
     }
     
-    //
+    //Submenu Compra
     public static void menuCompra(Map<String, Producto> mapa) {
         Scanner entrada = new Scanner(System.in);
         int opcion;
         
-        do {
+        do {//Bucle secundario
             mostrarMenuCompra();
             opcion = entrada.nextInt();
             switch (opcion) {
@@ -99,20 +99,22 @@ public class Ejercicio02Tema11 {
     
     
     //--ADMINISTRACION--
-    //
+    //Metodo que introduce un producto en el mapa
     public static void introducirProductos(Map<String, Producto> mapa) {
         System.out.println();
         System.out.println("Introduce los datos de un producto");
+        //Se crea un nuevo producto y se guarda usando el codigo como clave
         mapa.put(pedirCodigo(), new Producto(pedirNombreProducto(), pedriPrecio(), pedirStock()));
     }
     
-    //
+    //Metodo que visualiza los productos creados que hay en el mapa
     public static void visualizarProductos(Map<String, Producto> mapa) {
         System.out.println();
         
         if (mapa.isEmpty()) {
             System.out.println("No hay productos en la lista");
         } else {
+            //Se recorre todas las claves del mapa
             System.out.println("--LISTA DE PRODUCTOS--");
             for (String codigo : mapa.keySet()) {
                 System.out.println("Codigo: " + codigo + "\n" + mapa.get(codigo));
@@ -120,7 +122,7 @@ public class Ejercicio02Tema11 {
         }
     }
     
-    //
+    //Metodo que elimina un producto por su codigo
     public static void eliminarProductos(Map<String, Producto> mapa) {
         System.out.println();
         Scanner entrada = new Scanner(System.in);
@@ -136,7 +138,7 @@ public class Ejercicio02Tema11 {
     }
     
     //--COMPRA--
-    //
+    //Metodo que compra el producto que haya en el mapa
     public static void comprarProductos(Map<String, Producto> mapa) {
         System.out.println();
         Scanner entrada = new Scanner(System.in);
@@ -175,7 +177,7 @@ public class Ejercicio02Tema11 {
     }
     
     
-    //
+    //Metodos que piden informacion al usuario y cada uno de lo que se quiera hacer
     public static String pedirCodigo() {
         Scanner entrada = new Scanner(System.in);
         System.out.print("Introduce el codigo del producto: ");

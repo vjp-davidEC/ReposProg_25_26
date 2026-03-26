@@ -17,13 +17,16 @@ public class Ejercicio01Tema11 {
     /**
      * @param args the command line arguments
      */
+    
+    //Numero total de días del mes
     public static final int POS = 31;
+    
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        //
+        //Mapa donde se guardan las temperaturas del mes
         Map<Integer, Dia> temperaturas = new HashMap<>();
         
-        //
+        //Array con los nombres de los dias de la semana
         String[] diaSemana = {"Lunes", "Martes", "Miercoles", "Jueves","Viernes", "Sabado", "Domingo"};
         
         int opcion;
@@ -42,7 +45,7 @@ public class Ejercicio01Tema11 {
         } while (opcion != 5);
     }
     
-    //
+    //Metodo que muestra el menu principal
     public static void mostrarMenu() {
         System.out.println("\n--MENU--");
         System.out.println("1. RELLENAR LAS TEMPERATURAS");
@@ -53,10 +56,10 @@ public class Ejercicio01Tema11 {
         System.out.print("INTRODUCE UNA OPCION: ");
     }
     
-    //
+    //Metodo que genera temperaturas aleatorias y las guarda en el mapa
     public static void rellenarTemperaturas(Map<Integer, Dia> mapa, String[] diaSemana) {
         System.out.println();
-        mapa.clear();
+        mapa.clear();//Limpia el mapa antes de rellenarlo
         
         int diaInicial = (int)(Math.random() * 7);
         
@@ -73,7 +76,7 @@ public class Ejercicio01Tema11 {
         System.out.println("Temperaturas generadas correctamente");
     }
     
-    //
+    //Metodo que muestra las temperaturas del mes
     public static void mostrarTempuras(Map<Integer, Dia> mapa) {
         System.out.println();
         
@@ -88,7 +91,7 @@ public class Ejercicio01Tema11 {
         }
     }
     
-    //
+    //Metodo que calcula y muestra la temperatura media del mes
     public static void temperaturaMedia(Map<Integer, Dia> mapa) {
         System.out.println();
         
@@ -106,7 +109,7 @@ public class Ejercicio01Tema11 {
         }
     }
     
-    //
+    //Metodo que muestra el dia o dias mas calurosos del mes
     public static void diaMasCaluroso(Map<Integer, Dia> mapa) {
         System.out.println();
         

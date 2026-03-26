@@ -50,7 +50,7 @@ public class Autobus {
     }
     
     //Metodo
-    //
+    //Metodo que añade un conductor al autobus con su DNI como clave y su nombre como valor
     public void addConductor(String DNI, String nombre) {
         conductores.put(DNI, nombre);
     }
