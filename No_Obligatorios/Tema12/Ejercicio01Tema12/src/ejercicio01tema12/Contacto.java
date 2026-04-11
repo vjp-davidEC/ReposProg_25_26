@@ -55,6 +55,6 @@ public class Contacto {
     //Mostrar
     @Override
     public String toString() {
-        return "Contacto con nombre " + nombre + ", edad " + edad + " y telefono movil " + numeroMovil + '}';
+        return "Contacto con nombre " + nombre + ", edad " + edad + " y telefono movil " + numeroMovil;
     }
 }
