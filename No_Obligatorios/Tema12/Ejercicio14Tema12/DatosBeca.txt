@@ -1,0 +1,6 @@
+Nombre: Juan Perez
+Edad: 22
+Suspensos: 1
+Ingresos anuales: 10000
+Residencia familiar: NO
+---

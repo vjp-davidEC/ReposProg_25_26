@@ -1,0 +1,14 @@
+Nombre: Fernando Perez
+Sexo: H
+Edad: 45
+Numero de suspensos: 2
+Residencia familiar: NO
+Ingresos anuales: 1200
+---
+Nombre: Luisa Mateos
+Sexo: M
+Edad: 60
+Numero de suspensos: 1
+Residencia familiar: SI
+Ingresos anuales: 1350
+---

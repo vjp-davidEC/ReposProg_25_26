@@ -25,31 +25,36 @@ public class Ejercicio09Tema12 {
         PrintWriter pw = null;
 
         try {
+            //Se abre el archivo de entrada
             fr = new FileReader("frase.txt");
-
+            //Se abre el archivo de salida
             fw = new FileWriter("fraseinvertida.txt");
             pw = new PrintWriter(fw);
 
             String frase = "";
             int codigo = fr.read();
 
+            //Bucle para leer todo el archivo
             while (codigo != -1) {
                 char c = (char) codigo;
                 frase += c;
                 codigo = fr.read();
             }
 
+            //Invertir frase
             String fraseInvertida = "";
             for (int i = frase.length() - 1; i >= 0; i--) {
                 fraseInvertida += frase.charAt(i);
             }
-            
+            //Escribir la frase invertida en el archivo nuevo
             pw.println(fraseInvertida);
             System.out.println("Archivo fraseinvertida.txt creado correctamente");
             
+            //Cerrar los flujos
             pw.close();
             fw.close();
             fr.close();
+            //Por si hay errores
         } catch (FileNotFoundException e) {
             System.out.println("No se encontro el archivo frase.txt");
         } catch (IOException e) {
