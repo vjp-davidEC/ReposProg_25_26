@@ -12,3 +12,17 @@ Numero de suspensos: 1
 Residencia familiar: SI
 Ingresos anuales: 1350
 ---
+Nombre: Jesus Maria
+Sexo: H
+Edad: 25
+Numero de suspensos: 1
+Residencia familiar: no
+Ingresos anuales: 6700
+---
+Nombre: Pedro Marcos
+Sexo: H
+Edad: 35
+Numero de suspensos: 0
+Residencia familiar: SI
+Ingresos anuales: 9500
+---

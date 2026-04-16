@@ -70,7 +70,7 @@ public class Ejercicio05Tema12 {
             pw = new PrintWriter(fw);
             
             //Se escribe una linea con los datos del contacto
-            pw.println(nombre + " con " + edad + " anios " + " y telefono movil " + telefonoMovil);
+            pw.println(nombre + " con " + edad + " anios " + "y telefono movil " + telefonoMovil);
             //Se cierran los flujos
             pw.close();
             fw.close();
