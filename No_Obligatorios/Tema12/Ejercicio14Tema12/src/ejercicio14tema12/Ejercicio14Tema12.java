@@ -24,6 +24,7 @@ public class Ejercicio14Tema12 {
         
         try {
             //Se abre el archivo de entrada
+            //fr = new FileReader("C:\\Users\\alumno\\Documents\\workspace_netbeans\\Ejercicio13Tema12\\DatosBeca.txt");
             fr = new FileReader("DatosBeca.txt");
             br = new BufferedReader(fr);
             
@@ -34,8 +35,8 @@ public class Ejercicio14Tema12 {
             String sexo = "";
             String edad = "";
             String suspensos = "";
-            String ingresos = "";
             String residencia = "";
+            String ingresos = "";
             
             while (linea != null) {
                 if (empiezaPor(linea, "Nombre:")) {
@@ -47,28 +48,28 @@ public class Ejercicio14Tema12 {
                 if (empiezaPor(linea, "Edad:")) {
                     edad = extraerTexto(linea);
                 }
-                if (empiezaPor(linea, "Suspensos:")) {
+                if (empiezaPor(linea, "Numero de suspensos:")) {
                     suspensos = extraerTexto(linea);
-                }
-                if (empiezaPor(linea, "Ingresos anuales:")) {
-                    ingresos = extraerTexto(linea);
                 }
                 if (empiezaPor(linea, "Residencia familiar:")) {
                     residencia = extraerTexto(linea);
                 }
+                if (empiezaPor(linea, "Ingresos anuales:")) {
+                    ingresos = extraerTexto(linea);
+                }
                     
                 if (empiezaPor(linea, "---")) {
-                    int beca = calcularBeca(edad, suspensos, ingresos, residencia);//Calcular beca
+                    int beca = calcularBeca(edad, suspensos, residencia, ingresos);//Calcular beca
                     if (beca > 0) {//Mostrar si tiene beca
-                        System.out.println(nombre + " tiene una beca de " + beca + " Euros");
+                        System.out.println(nombre + "(" + sexo + ")" + "tiene una beca de " + beca + " Euros");
                     }
                     //Reiniciar variables
                     nombre = "";
                     sexo = "";
                     edad = "";
                     suspensos = "";
-                    ingresos = "";
                     residencia = "";
+                    ingresos = "";  
                 }
                 linea = br.readLine();
             }
@@ -111,7 +112,7 @@ public class Ejercicio14Tema12 {
     }
     
     //Metodo que calcula la beca usando numeros reales
-    public static int calcularBeca (String edad, String suspensos, String ingresos, String residencia) {
+    public static int calcularBeca (String edad, String suspensos, String residencia, String ingresos) {
         //Se convierte a INT todos los Strings
         int edadNum = Integer.parseInt(edad);
         int suspensosNum = Integer.parseInt(suspensos);

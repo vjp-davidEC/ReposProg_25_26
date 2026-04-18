@@ -4,6 +4,7 @@
  */
 package ejercicio09tema12;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -23,22 +24,23 @@ public class Ejercicio09Tema12 {
         FileWriter fw = null;
         FileReader fr = null;
         PrintWriter pw = null;
+        BufferedReader br = null;
 
         try {
             //Se abre el archivo de entrada
             fr = new FileReader("frase.txt");
+            br = new BufferedReader(fr);
             //Se abre el archivo de salida
             fw = new FileWriter("fraseinvertida.txt");
             pw = new PrintWriter(fw);
 
             String frase = "";
-            int codigo = fr.read();
+            String linea = br.readLine();
 
             //Bucle para leer todo el archivo
-            while (codigo != -1) {
-                char c = (char) codigo;
-                frase += c;
-                codigo = fr.read();
+            while (linea != null) {
+                frase += linea;
+                linea = br.readLine();
             }
 
             //Invertir frase
@@ -53,6 +55,7 @@ public class Ejercicio09Tema12 {
             //Cerrar los flujos
             pw.close();
             fw.close();
+            br.close();
             fr.close();
             //Por si hay errores
         } catch (FileNotFoundException e) {

@@ -34,7 +34,7 @@ public class Ejercicio12BisTema12 {
             while (linea != null) {
                 //Se divide las lineas usando ";"
                 String[] numeros = linea.split(";");
-                //Se recorre el arrya de numeros
+                //Se recorre el array de numeros
                 for (int i = 0; i < numeros.length; i++) {
                     //Se combierte cada numero de String en INT
                     sumaTotal += Integer.parseInt(numeros[i]);
