@@ -37,9 +37,9 @@ public class Producto implements Comparable<Producto> {
     
     @Override
     public int compareTo(Producto p) {
-        if (this.precio > p.getPrecio()) {
+        if (this.precio < p.getPrecio()) {
             return 1;
-        } else if (this.precio < p.getPrecio()) {
+        } else if (this.precio > p.getPrecio()) {
             return -1;
         } else {
             return 0;

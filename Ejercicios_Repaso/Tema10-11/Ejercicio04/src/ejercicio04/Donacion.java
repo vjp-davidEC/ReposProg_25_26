@@ -37,9 +37,9 @@ public class Donacion implements Comparable<Donacion> {
     
     @Override
     public int compareTo(Donacion d) {
-        if (this.cantidad > d.getCantidad()) {
+        if (this.cantidad < d.getCantidad()) {
             return 1;
-        } else if (this.cantidad < d.getCantidad()) {
+        } else if (this.cantidad > d.getCantidad()) {
             return -1;
         } else {
             return 0;

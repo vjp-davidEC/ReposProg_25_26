@@ -175,7 +175,7 @@ public class Ejercicio04 {
         } else {
             for (String key : donaciones3.keySet()) {
                 Double dona = donaciones3.get(key);
-                System.out.println(dona.toString());
+                System.out.println(key + " --> " + dona);
             }
         }
     }
@@ -241,7 +241,7 @@ public class Ejercicio04 {
         } else {
             for (String key : donaciones3.keySet()) {
                 Double dona = donaciones3.get(key);
-                System.out.println(dona.toString());
+                System.out.println(key + " --> " + dona);
             }
         }
     }

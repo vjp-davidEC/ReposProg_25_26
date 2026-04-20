@@ -37,10 +37,10 @@ public class Persona implements Comparable<Persona> {
     
     @Override
     public int compareTo(Persona p) {
-        if (this.edad < p.getEdad()) {
-            return -1;
-        } else if (this.edad > p.getEdad()) {
+        if (this.edad > p.getEdad()) {
             return 1;
+        } else if (this.edad < p.getEdad()) {
+            return -1;
         } else {
             return 0;
         }
