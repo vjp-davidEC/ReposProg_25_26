@@ -76,13 +76,23 @@ public class Ejercicio06Tema12 {
             for (int numero : pares) {
                 pw.println(numero);
             }
-            //Se cierran los flujos
-            pw.close();
-            fw.close();
-            
             System.out.println("Fichero creado correctamente");
+        } catch (FileNotFoundException e) {
+            System.out.println("Archivo no encontrado");
         } catch (IOException e) {//Se captura los errores de escritura
             System.out.println("Error en la escritura del archivo");
+        } finally {
+            try {
+                //Se cierran los flujos
+                if (pw != null) {
+                    pw.close();
+                }
+                if (fw != null) {
+                    fw.close();
+                }
+            } catch (IOException e) {
+                System.out.println("Error al cerrar los flujos");
+            }
         }
     }
     
@@ -106,13 +116,22 @@ public class Ejercicio06Tema12 {
                 System.out.println(linea);
                 linea = br.readLine();
             }
-            //Se cierra los flujos
-            br.close();
-            fr.close();
         } catch (FileNotFoundException e) {//Si el fichero no existe
             System.out.println("Archivo no encontrado");
         } catch (IOException e) {//Se captura los errores de escritura
             System.out.println("Error al leer el archivo");
+        } finally {
+            try {
+                //Se cierra los flujos
+                if (br != null) {
+                    br.close();
+                }
+                if (fr != null) {
+                    fr.close();
+                }
+            } catch (IOException e) {
+                System.out.println("Error al cerrar los flujos");
+            }
         }
     }
     

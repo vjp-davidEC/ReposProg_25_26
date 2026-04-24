@@ -5,6 +5,7 @@
 package ejercicio14tema12;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -73,11 +74,22 @@ public class Ejercicio14Tema12 {
                 }
                 linea = br.readLine();
             }
-            //Cierre de flujos
-            br.close();
-            fr.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Archivo no encontrado");
         } catch (IOException e) {
             System.out.println("Error al leer el archivo");
+        } finally {
+            try {
+                //Cierre de flujos
+                if (br != null) {
+                    br.close();
+                }
+                if (fr != null) {
+                    fr.close();
+                }
+            } catch (IOException e) {
+                System.out.println("Error al cerrar los flujos");
+            }
         }
     }
     

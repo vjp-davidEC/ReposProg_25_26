@@ -4,6 +4,7 @@
  */
 package ejercicio13tema12;
 
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -50,12 +51,22 @@ public class Ejercicio13Tema12 {
             pw.println("Residencia familiar: " + residencia);
             pw.println("Ingresos anuales: " + ingresosAnuales);
             pw.println("---");
-            
-            //Cierre de flujos
-            pw.close();
-            fw.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Archivo no encontrado");
         } catch (IOException e) {
             System.out.println("Error al escribir en el archivo");
+        } finally {
+            try {
+                //Cierre de flujos
+                if (pw != null) {
+                    pw.close();
+                }
+                if (fw != null) {
+                    fw.close();
+                }
+            } catch (IOException e) {
+                System.out.println("Error al cerrar los flujos");
+            }
         }
     }
      
