@@ -1,0 +1,2 @@
+La tarea con descripcion Hay que estudiar mas, true esta completada
+La tarea con descripcion Tengo que estudiar menos, false esta completada
